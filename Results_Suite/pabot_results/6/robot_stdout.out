@@ -1,0 +1,23 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.OrangeHRM AddUser Verify User :: Suite description                     
+==============================================================================
+Launch OrangeHRM and login to application                             | PASS |
+------------------------------------------------------------------------------
+Click on Admin->UserManagement->Users and Click on Add button         | PASS |
+------------------------------------------------------------------------------
+Add Users Details and Click on Save button                            | PASS |
+------------------------------------------------------------------------------
+Verify that User added to WebTable                                    | FAIL |
+Element with locator 'xpath=//a[text()='Kumar22']' not found.
+------------------------------------------------------------------------------
+Close Browser at end                                                  | PASS |
+------------------------------------------------------------------------------
+Suites.OrangeHRM AddUser Verify User :: Suite description             | FAIL |
+5 tests, 4 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+5 tests, 4 passed, 1 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results_Suite\pabot_results\6\output.xml

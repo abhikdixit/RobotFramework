@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210617 21:08:22.230" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite id="s1" name="Suites">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Logo_Click.robot" id="s1-s1" name="OrangeHRM Logo Click">
+<test id="s1-s1-t1" name="OrangeHRM_Logo_Click">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210617 21:08:22.514" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20210617 21:08:32.668" starttime="20210617 21:08:22.514"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210617 21:08:34.824" starttime="20210617 21:08:32.668"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:34.825" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20210617 21:08:34.957" starttime="20210617 21:08:34.824"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:34.957" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20210617 21:08:35.037" starttime="20210617 21:08:34.957"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210617 21:08:35.038" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" endtime="20210617 21:08:39.511" starttime="20210617 21:08:35.037"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>link=Dashboard</arg>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20210617 21:08:39.512" level="INFO">Verifying element 'link=Dashboard' contains exact text 'Dashboard'.</msg>
+<status status="PASS" endtime="20210617 21:08:40.492" starttime="20210617 21:08:39.511"></status>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<doc>Clicks an image identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//img[@alt='OrangeHRM']</arg>
+</arguments>
+<msg timestamp="20210617 21:08:40.493" level="INFO">Clicking image 'xpath=//img[@alt='OrangeHRM']'.</msg>
+<status status="PASS" endtime="20210617 21:08:45.888" starttime="20210617 21:08:40.492"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.889" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20210617 21:08:47.889" starttime="20210617 21:08:45.888"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>Get a Free Demo</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.890" level="INFO">Clicking button 'Get a Free Demo'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210617 21:09:07.572" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210617 21:09:07.573" starttime="20210617 21:08:47.931"></status>
+</kw>
+<msg timestamp="20210617 21:09:07.579" level="FAIL">Button with locator 'Get a Free Demo' not found.</msg>
+<status status="FAIL" endtime="20210617 21:09:07.579" starttime="20210617 21:08:47.889"></status>
+</kw>
+<status status="FAIL" endtime="20210617 21:09:07.580" critical="yes" starttime="20210617 21:08:22.513">Button with locator 'Get a Free Demo' not found.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210617 21:09:07.582" starttime="20210617 21:08:22.257"></status>
+</suite>
+<status status="FAIL" endtime="20210617 21:09:07.588" starttime="20210617 21:08:22.232"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Suites" pass="0">Suites</stat>
+<stat fail="1" id="s1-s1" name="OrangeHRM Logo Click" pass="0">Suites.OrangeHRM Logo Click</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

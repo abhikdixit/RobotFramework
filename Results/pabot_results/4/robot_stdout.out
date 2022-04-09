@@ -1,0 +1,23 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.OrangeHRM Add Random User :: Suite description                         
+==============================================================================
+Launch OrangeHRM and login to application                             | PASS |
+------------------------------------------------------------------------------
+Click on Admin->UserManagement->Users and Click on Add button         | PASS |
+------------------------------------------------------------------------------
+Add Users Details and Click on Save button                            | FAIL |
+No keyword with name 'Generate random string' found.
+------------------------------------------------------------------------------
+Close Browser                                                         | PASS |
+------------------------------------------------------------------------------
+Suites.OrangeHRM Add Random User :: Suite description                 | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+4 critical tests, 3 passed, 1 failed
+4 tests total, 3 passed, 1 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\4\output.xml

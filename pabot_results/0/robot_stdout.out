@@ -1,0 +1,25 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.OrangeHRM AddUser :: Suite description                                 
+==============================================================================
+Launch OrangeHRM and Go to Add Users Page                             | FAIL |
+Element with locator 'link=Dashboard' not found.
+------------------------------------------------------------------------------
+Click on Add User and Add the User Details                            | FAIL |
+Element with locator 'link=Admin' not found.
+------------------------------------------------------------------------------
+Add Users Details and Click on Save button                            | FAIL |
+List with locator 'id=systemUser_userType' not found.
+------------------------------------------------------------------------------
+Close Browser at end                                                  | PASS |
+------------------------------------------------------------------------------
+Suites.OrangeHRM AddUser :: Suite description                         | FAIL |
+4 critical tests, 1 passed, 3 failed
+4 tests total, 1 passed, 3 failed
+==============================================================================
+Suites                                                                | FAIL |
+4 critical tests, 1 passed, 3 failed
+4 tests total, 1 passed, 3 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\pabot_results\0\output.xml

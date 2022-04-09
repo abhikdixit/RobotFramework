@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210617 21:08:35.759" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite id="s1" name="Suites">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_AddUser_Search_User.robot" id="s1-s1" name="OrangeHRM AddUser Search User">
+<test id="s1-s1-t1" name="Launch OrangeHRM and login to application">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210617 21:08:36.077" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20210617 21:08:45.563" starttime="20210617 21:08:36.077"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210617 21:08:47.735" starttime="20210617 21:08:45.564"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='txtUsername']</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.735" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@id='txtUsername']'.</msg>
+<status status="PASS" endtime="20210617 21:08:47.845" starttime="20210617 21:08:47.735"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.846" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20210617 21:08:47.949" starttime="20210617 21:08:47.846"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>css=input[id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.949" level="INFO">Clicking button 'css=input[id='btnLogin']'.</msg>
+<status status="PASS" endtime="20210617 21:08:52.524" starttime="20210617 21:08:47.949"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20210617 21:08:52.552" level="INFO">Current page contains link 'Dashboard'.</msg>
+<status status="PASS" endtime="20210617 21:08:52.552" starttime="20210617 21:08:52.525"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20210617 21:08:52.552" critical="yes" starttime="20210617 21:08:36.076"></status>
+</test>
+<test id="s1-s1-t2" name="Click on Admin-&gt;UserManagement-&gt;Users and Click on Add button">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link=Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:52.555" level="INFO">Simulating Mouse Over on element 'link=Admin'.</msg>
+<status status="PASS" endtime="20210617 21:08:52.669" starttime="20210617 21:08:52.555"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210617 21:08:54.674" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20210617 21:08:54.675" starttime="20210617 21:08:52.669"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link=User Management</arg>
+</arguments>
+<msg timestamp="20210617 21:08:54.678" level="INFO">Simulating Mouse Over on element 'link=User Management'.</msg>
+<status status="PASS" endtime="20210617 21:08:54.783" starttime="20210617 21:08:54.677"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link=Users</arg>
+</arguments>
+<msg timestamp="20210617 21:08:54.783" level="INFO">Clicking link 'link=Users'.</msg>
+<status status="PASS" endtime="20210617 21:08:56.166" starttime="20210617 21:08:54.783"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>name=btnAdd</arg>
+</arguments>
+<msg timestamp="20210617 21:08:56.167" level="INFO">Clicking button 'name=btnAdd'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.073" starttime="20210617 21:08:56.167"></status>
+</kw>
+<status status="PASS" endtime="20210617 21:08:57.073" critical="yes" starttime="20210617 21:08:52.553"></status>
+</test>
+<test id="s1-s1-t3" name="Add Users Details and Click on Save button">
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<arguments>
+<arg>id=systemUser_userType</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.075" level="INFO">Selecting options from selection list 'id=systemUser_userType' by label Admin.</msg>
+<status status="PASS" endtime="20210617 21:08:57.195" starttime="20210617 21:08:57.075"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=systemUser_employeeName_empName</arg>
+<arg>Fiona Grace</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.196" level="INFO">Typing text 'Fiona Grace' into text field 'id=systemUser_employeeName_empName'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.367" starttime="20210617 21:08:57.196"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=systemUser_userName</arg>
+<arg>Kumar11</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.367" level="INFO">Typing text 'Kumar11' into text field 'id=systemUser_userName'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.469" starttime="20210617 21:08:57.367"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>id=systemUser_status</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.470" level="INFO">Selecting options from selection list 'id=systemUser_status' by value 1.</msg>
+<status status="PASS" endtime="20210617 21:08:57.520" starttime="20210617 21:08:57.469"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=systemUser_password</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.520" level="INFO">Typing text 'admin123' into text field 'id=systemUser_password'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.645" starttime="20210617 21:08:57.520"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=systemUser_confirmPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.645" level="INFO">Typing text 'admin123' into text field 'id=systemUser_confirmPassword'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.749" starttime="20210617 21:08:57.645"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>id=btnSave</arg>
+</arguments>
+<msg timestamp="20210617 21:08:57.750" level="INFO">Clicking button 'id=btnSave'.</msg>
+<status status="PASS" endtime="20210617 21:08:57.837" starttime="20210617 21:08:57.749"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210617 21:08:59.851" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20210617 21:08:59.851" starttime="20210617 21:08:57.838"></status>
+</kw>
+<status status="PASS" endtime="20210617 21:08:59.852" critical="yes" starttime="20210617 21:08:57.074"></status>
+</test>
+<test id="s1-s1-t4" name="Search User from WebTable">
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>id=searchSystemUser_userName</arg>
+<arg>Kumar11</arg>
+</arguments>
+<msg timestamp="20210617 21:08:59.854" level="INFO">Typing text 'Kumar11' into text field 'id=searchSystemUser_userName'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210617 21:09:00.042" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210617 21:09:00.043" starttime="20210617 21:08:59.868"></status>
+</kw>
+<msg timestamp="20210617 21:09:00.046" level="FAIL">Element with locator 'id=searchSystemUser_userName' not found.</msg>
+<status status="FAIL" endtime="20210617 21:09:00.046" starttime="20210617 21:08:59.854"></status>
+</kw>
+<status status="FAIL" endtime="20210617 21:09:00.046" critical="yes" starttime="20210617 21:08:59.853">Element with locator 'id=searchSystemUser_userName' not found.</status>
+</test>
+<test id="s1-s1-t5" name="Close Browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210617 21:09:04.196" starttime="20210617 21:09:00.047"></status>
+</kw>
+<status status="PASS" endtime="20210617 21:09:04.196" critical="yes" starttime="20210617 21:09:00.047"></status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210617 21:09:04.197" starttime="20210617 21:08:35.788"></status>
+</suite>
+<status status="FAIL" endtime="20210617 21:09:04.200" starttime="20210617 21:08:35.761"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="4">Critical Tests</stat>
+<stat fail="1" pass="4">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Suites" pass="4">Suites</stat>
+<stat fail="1" id="s1-s1" name="OrangeHRM AddUser Search User" pass="4">Suites.OrangeHRM AddUser Search User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

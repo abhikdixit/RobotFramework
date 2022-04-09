@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210211 16:21:27.995" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite id="s1" name="Suites">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Login.robot" id="s1-s1" name="OrangeHRM Login">
+<test id="s1-s1-t1" name="Launch OrangeHRM Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210211 16:21:28.791" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20210211 16:21:42.574" starttime="20210211 16:21:28.790"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210211 16:21:44.787" starttime="20210211 16:21:42.575"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210211 16:21:44.790" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20210211 16:21:44.967" starttime="20210211 16:21:44.788"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210211 16:21:44.968" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20210211 16:21:45.088" starttime="20210211 16:21:44.967"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210211 16:21:45.088" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" endtime="20210211 16:21:49.250" starttime="20210211 16:21:45.088"></status>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<arguments>
+<arg>link=Dashboard</arg>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20210211 16:21:49.251" level="INFO">Verifying element 'link=Dashboard' contains exact text 'Dashboard'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20210211 16:21:49.872" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20210211 16:21:49.873" starttime="20210211 16:21:49.300"></status>
+</kw>
+<msg timestamp="20210211 16:21:49.880" level="FAIL">Element with locator 'link=Dashboard' not found.</msg>
+<status status="FAIL" endtime="20210211 16:21:49.880" starttime="20210211 16:21:49.250"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" endtime="20210211 16:21:49.881" critical="yes" starttime="20210211 16:21:28.788">Element with locator 'link=Dashboard' not found.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210211 16:21:49.883" starttime="20210211 16:21:28.065"></status>
+</suite>
+<status status="FAIL" endtime="20210211 16:21:49.889" starttime="20210211 16:21:28.003"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Suites" pass="0">Suites</stat>
+<stat fail="1" id="s1-s1" name="OrangeHRM Login" pass="0">Suites.OrangeHRM Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

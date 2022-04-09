@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210617 21:07:59.389" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite id="s1" name="Suites">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Login.robot" id="s1-s1" name="OrangeHRM Login">
+<test id="s1-s1-t1" name="Launch OrangeHRM Login Page">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/index.php</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210617 21:07:59.787" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php'.</msg>
+<status status="PASS" endtime="20210617 21:08:11.052" starttime="20210617 21:07:59.787"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210617 21:08:13.227" starttime="20210617 21:08:11.052"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtUsername</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:13.228" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20210617 21:08:13.336" starttime="20210617 21:08:13.227"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:13.337" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20210617 21:08:13.415" starttime="20210617 21:08:13.336"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210617 21:08:13.416" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" endtime="20210617 21:08:27.005" starttime="20210617 21:08:13.415"></status>
+</kw>
+<kw name="Sleep 2s">
+<msg timestamp="20210617 21:08:27.010" level="FAIL">No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep</msg>
+<status status="FAIL" endtime="20210617 21:08:27.010" starttime="20210617 21:08:27.010"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="FAIL" endtime="20210617 21:08:27.010" critical="yes" starttime="20210617 21:07:59.785">No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210617 21:08:27.012" starttime="20210617 21:07:59.430"></status>
+</suite>
+<status status="FAIL" endtime="20210617 21:08:27.015" starttime="20210617 21:07:59.393"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+<stat fail="1" pass="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Suites" pass="0">Suites</stat>
+<stat fail="1" id="s1-s1" name="OrangeHRM Login" pass="0">Suites.OrangeHRM Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

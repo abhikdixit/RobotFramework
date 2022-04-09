@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210617 21:08:27.716" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite id="s1" name="Suites">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Add_Random_User.robot" id="s1-s1" name="OrangeHRM Add Random User">
+<test id="s1-s1-t1" name="Launch OrangeHRM and login to application">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20210617 21:08:28.107" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" endtime="20210617 21:08:37.621" starttime="20210617 21:08:28.107"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20210617 21:08:40.086" starttime="20210617 21:08:37.622"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='txtUsername']</arg>
+<arg>Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:40.087" level="INFO">Typing text 'Admin' into text field 'xpath=//input[@id='txtUsername']'.</msg>
+<status status="PASS" endtime="20210617 21:08:40.409" starttime="20210617 21:08:40.086"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
+</arguments>
+<msg timestamp="20210617 21:08:40.410" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20210617 21:08:40.550" starttime="20210617 21:08:40.410"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>css=input[id='btnLogin']</arg>
+</arguments>
+<msg timestamp="20210617 21:08:40.551" level="INFO">Clicking button 'css=input[id='btnLogin']'.</msg>
+<status status="PASS" endtime="20210617 21:08:45.356" starttime="20210617 21:08:40.550"></status>
+</kw>
+<kw name="Page Should Contain Link" library="SeleniumLibrary">
+<doc>Verifies link identified by ``locator`` is found from current page.</doc>
+<arguments>
+<arg>Dashboard</arg>
+</arguments>
+<msg timestamp="20210617 21:08:45.394" level="INFO">Current page contains link 'Dashboard'.</msg>
+<status status="PASS" endtime="20210617 21:08:45.395" starttime="20210617 21:08:45.357"></status>
+</kw>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20210617 21:08:45.395" critical="yes" starttime="20210617 21:08:28.105"></status>
+</test>
+<test id="s1-s1-t2" name="Click on Admin-&gt;UserManagement-&gt;Users and Click on Add button">
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link=Admin</arg>
+</arguments>
+<msg timestamp="20210617 21:08:45.398" level="INFO">Simulating Mouse Over on element 'link=Admin'.</msg>
+<status status="PASS" endtime="20210617 21:08:45.516" starttime="20210617 21:08:45.397"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.517" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20210617 21:08:47.517" starttime="20210617 21:08:45.517"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>link=User Management</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.517" level="INFO">Simulating Mouse Over on element 'link=User Management'.</msg>
+<status status="PASS" endtime="20210617 21:08:47.584" starttime="20210617 21:08:47.517"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>link=Users</arg>
+</arguments>
+<msg timestamp="20210617 21:08:47.585" level="INFO">Clicking link 'link=Users'.</msg>
+<status status="PASS" endtime="20210617 21:08:54.316" starttime="20210617 21:08:47.584"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>name=btnAdd</arg>
+</arguments>
+<msg timestamp="20210617 21:08:54.317" level="INFO">Clicking button 'name=btnAdd'.</msg>
+<status status="PASS" endtime="20210617 21:08:58.483" starttime="20210617 21:08:54.316"></status>
+</kw>
+<status status="PASS" endtime="20210617 21:08:58.484" critical="yes" starttime="20210617 21:08:45.396"></status>
+</test>
+<test id="s1-s1-t3" name="Add Users Details and Click on Save button">
+<kw name="Generate random string">
+<arguments>
+<arg>4</arg>
+<arg>0123456789</arg>
+</arguments>
+<assign>
+<var>${random_num}</var>
+</assign>
+<msg timestamp="20210617 21:08:58.501" level="FAIL">No keyword with name 'Generate random string' found.</msg>
+<status status="FAIL" endtime="20210617 21:08:58.501" starttime="20210617 21:08:58.501"></status>
+</kw>
+<status status="FAIL" endtime="20210617 21:08:58.502" critical="yes" starttime="20210617 21:08:58.485">No keyword with name 'Generate random string' found.</status>
+</test>
+<test id="s1-s1-t4" name="Close Browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20210617 21:09:02.686" starttime="20210617 21:08:58.507"></status>
+</kw>
+<status status="PASS" endtime="20210617 21:09:02.687" critical="yes" starttime="20210617 21:08:58.505"></status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210617 21:09:02.688" starttime="20210617 21:08:27.758"></status>
+</suite>
+<status status="FAIL" endtime="20210617 21:09:02.690" starttime="20210617 21:08:27.721"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="3">Critical Tests</stat>
+<stat fail="1" pass="3">All Tests</stat>
+</total>
+<tag>
+<stat fail="0" pass="1">Smoke</stat>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Suites" pass="3">Suites</stat>
+<stat fail="1" id="s1-s1" name="OrangeHRM Add Random User" pass="3">Suites.OrangeHRM Add Random User</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

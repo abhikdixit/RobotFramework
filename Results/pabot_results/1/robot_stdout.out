@@ -1,0 +1,18 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.OrangeHRM Login :: Suite description                                   
+==============================================================================
+Launch OrangeHRM Login Page                                           | FAIL |
+No keyword with name 'Sleep 2s' found. Did you mean:
+    BuiltIn.Sleep
+------------------------------------------------------------------------------
+Suites.OrangeHRM Login :: Suite description                           | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\1\output.xml

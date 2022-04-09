@@ -1,0 +1,15 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.OrangeHRM Login :: Suite description                                   
+==============================================================================
+Launch OrangeHRM Login Page                                           | FAIL |
+Element with locator 'link=Dashboard' not found.
+------------------------------------------------------------------------------
+Suites.OrangeHRM Login :: Suite description                           | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Suites                                                                | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results_Suite\pabot_results\1\output.xml

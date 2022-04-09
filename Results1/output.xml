@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20210618 18:03:07.433" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\Calculator_Using_Sikuli.robot" id="s1" name="Calculator Using Sikuli">
+<test id="s1-t1" name="Calc_UsingSikuli">
+<kw name="Run" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's Run method.</doc>
+<arguments>
+<arg>calc.exe</arg>
+</arguments>
+<msg timestamp="20210618 18:03:15.093" level="INFO">AutoItLibrary.Run(FileName='calc.exe', WorkingDir='', Flag='')</msg>
+<status status="PASS" endtime="20210618 18:03:15.093" starttime="20210618 18:03:15.076"></status>
+</kw>
+<kw name="Win Wait Active" library="AutoItLibrary">
+<doc>Direct wrapper for AutoIt's WinWaitActive method.</doc>
+<arguments>
+<arg>Calculator</arg>
+</arguments>
+<msg timestamp="20210618 18:03:16.069" level="INFO">AutoItLibrary.WinWaitActive(WindowTitle='Calculator', WindowText='', TimeOut=60)</msg>
+<status status="PASS" endtime="20210618 18:03:16.072" starttime="20210618 18:03:15.099"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>D:/Robot Framework/SikuliObjects/7.PNG</arg>
+</arguments>
+<msg timestamp="20210618 18:03:20.712" level="INFO">Params: [D:/Robot Framework/SikuliObjects/7.PNG]</msg>
+<msg timestamp="20210618 18:03:20.712" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1624019599324.png'/&gt;
+[log] CLICK on L[313,642]@S(0) (547 msec)</msg>
+<status status="PASS" endtime="20210618 18:03:20.713" starttime="20210618 18:03:16.169"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>D:/Robot Framework/SikuliObjects/Plus.PNG</arg>
+</arguments>
+<msg timestamp="20210618 18:03:23.005" level="INFO">Params: [D:/Robot Framework/SikuliObjects/Plus.PNG]</msg>
+<msg timestamp="20210618 18:03:23.005" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1624019601615.png'/&gt;
+[log] CLICK on L[962,856]@S(0) (562 msec)</msg>
+<status status="PASS" endtime="20210618 18:03:23.006" starttime="20210618 18:03:20.714"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>D:/Robot Framework/SikuliObjects/8.PNG</arg>
+</arguments>
+<msg timestamp="20210618 18:03:25.255" level="INFO">Params: [D:/Robot Framework/SikuliObjects/8.PNG]</msg>
+<msg timestamp="20210618 18:03:25.255" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1624019603830.png'/&gt;
+[log] CLICK on L[531,642]@S(0) (569 msec)</msg>
+<status status="PASS" endtime="20210618 18:03:25.255" starttime="20210618 18:03:23.009"></status>
+</kw>
+<kw name="Click" library="SikuliLibrary">
+<doc>Click</doc>
+<arguments>
+<arg>D:/Robot Framework/SikuliObjects/Equall.PNG</arg>
+</arguments>
+<msg timestamp="20210618 18:03:30.732" level="INFO">Params: [D:/Robot Framework/SikuliObjects/Equall.PNG]</msg>
+<msg timestamp="20210618 18:03:30.732" html="yes" level="INFO">&lt;img src='sikuli_captured/sikuliximage-1624019608633.png'/&gt;</msg>
+<msg timestamp="20210618 18:03:30.733" level="FAIL">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happend, could not find P(D:/Robot Framework/SikuliObjects/Equall.PNG) S: 0.7</msg>
+<status status="FAIL" endtime="20210618 18:03:30.733" starttime="20210618 18:03:25.256"></status>
+</kw>
+<status status="FAIL" endtime="20210618 18:03:30.736" critical="yes" starttime="20210618 18:03:15.075">com.github.rainmanwy.robotframework.sikulilib.exceptions.TimeoutException: Timeout happend, could not find P(D:/Robot Framework/SikuliObjects/Equall.PNG) S: 0.7</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" endtime="20210618 18:03:30.742" starttime="20210618 18:03:07.439"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Calculator Using Sikuli" pass="0">Calculator Using Sikuli</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
