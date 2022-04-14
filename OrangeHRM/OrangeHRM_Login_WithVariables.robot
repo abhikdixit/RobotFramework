@@ -2,8 +2,8 @@
 Documentation    Suite description
 Library     SeleniumLibrary
 *** Variables ***
-${url}      https://opensource-demo.orangehrmlive.com/
-${browser}      chrome
+${url}      https://opensource-demo1.orangehrmlive.com/
+${browser}      firefox
 
 *** Test Cases ***
 Launch OrangeHRM Login Page

@@ -1,14 +1,17 @@
 ==============================================================================
-Suites                                                                        
+OrangeHRM                                                                     
 ==============================================================================
-Suites.OrangeHRM Login WithVariables :: Suite description                     
+OrangeHRM.ImplicitWait Example :: Suite description                           
 ==============================================================================
-Launch OrangeHRM Login Page                                           | PASS |
+Launch OrangeHRM Login Page                                           | FAIL |
+Element with locator 'link=Dashboard' not found.
 ------------------------------------------------------------------------------
-Suites.OrangeHRM Login WithVariables :: Suite description             | PASS |
-1 test, 1 passed, 0 failed
+OrangeHRM.ImplicitWait Example :: Suite description                   | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+OrangeHRM                                                             | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results_Suite\pabot_results\2\output.xml

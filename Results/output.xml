@@ -1,74 +1,355 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.8.2 on win32)" generated="20220409 11:18:08.824" rpa="false" schemaversion="2">
-<suite id="s1" name="OrangeHRM Logo Click" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Logo_Click.robot">
-<test id="s1-t1" name="OrangeHRM_Logo_Click">
+<robot rpa="false" generated="20220414 18:21:31.783" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\DataDrivenTestCSV.robot" id="s1" name="DataDrivenTestCSV">
+<kw type="setup" name="LaunchApplication" library="commonfunctionality">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>https://opensource-demo.orangehrmlive.com/</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220409 11:18:09.064" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" starttime="20220409 11:18:09.063" endtime="20220409 11:18:17.881"/>
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:33.439" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php/auth/login'.</msg>
+<status status="PASS" endtime="20220414 18:21:40.531" starttime="20220414 18:21:33.438"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220409 11:18:17.882" endtime="20220409 11:18:20.051"/>
+<status status="PASS" endtime="20220414 18:21:40.667" starttime="20220414 18:21:40.531"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=txtUsername</arg>
-<arg>Admin</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220409 11:18:20.052" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
-<status status="PASS" starttime="20220409 11:18:20.051" endtime="20220409 11:18:20.129"/>
+<status status="PASS" endtime="20220414 18:21:40.667" starttime="20220414 18:21:33.438"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>name=txtPassword</arg>
+<test id="s1-t1" name="Verify Login Fails with Invalid Credentials using Admin1 admin123 Invalid credentials">
+<kw name="Invalid Login Scenarios">
+<arguments>
+<arg>Admin1</arg>
 <arg>admin123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220409 11:18:20.130" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
-<status status="PASS" starttime="20220409 11:18:20.130" endtime="20220409 11:18:20.202"/>
+<arg>Invalid credentials</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:40.671" level="INFO">Typing text 'Admin1' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20220414 18:21:40.808" starttime="20220414 18:21:40.670"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:40.809" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20220414 18:21:40.927" starttime="20220414 18:21:40.808"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>xpath=//input[@id='btnLogin']</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220409 11:18:20.202" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
-<status status="PASS" starttime="20220409 11:18:20.202" endtime="20220409 11:18:24.327"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>link=Dashboard</arg>
-<arg>Dashboard</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20220409 11:18:24.327" level="INFO">Verifying element 'link=Dashboard' contains exact text 'Dashboard'.</msg>
-<status status="PASS" starttime="20220409 11:18:24.327" endtime="20220409 11:18:24.406"/>
-</kw>
-<kw name="Click Image" library="SeleniumLibrary">
-<arg>xpath=//img[@alt='OrangeHRM']</arg>
-<doc>Clicks an image identified by ``locator``.</doc>
-<msg timestamp="20220409 11:18:24.406" level="INFO">Clicking image 'xpath=//img[@alt='OrangeHRM']'.</msg>
-<status status="PASS" starttime="20220409 11:18:24.406" endtime="20220409 11:18:24.490"/>
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:40.928" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20220414 18:21:42.471" starttime="20220414 18:21:40.927"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20220409 11:18:26.497" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20220409 11:18:24.490" endtime="20220409 11:18:26.497"/>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20220414 18:21:44.482" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20220414 18:21:44.483" starttime="20220414 18:21:42.472"></status>
 </kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>id=spanMessage</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20220414 18:21:44.498" level="INFO">${count} = 1</msg>
+<status status="PASS" endtime="20220414 18:21:44.498" starttime="20220414 18:21:44.483"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${count} &gt; 0</arg>
+<arg>Element Should Contain</arg>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<arg>ELSE</arg>
+<arg>Element Should Contain</arg>
+<arg>${lnk_dashboard}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:44.518" level="INFO">Element 'id=spanMessage' contains text 'Invalid credentials'.</msg>
+<status status="PASS" endtime="20220414 18:21:44.518" starttime="20220414 18:21:44.499"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:44.518" starttime="20220414 18:21:44.498"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:44.518" starttime="20220414 18:21:40.670"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:44.519" critical="yes" starttime="20220414 18:21:40.668"></status>
+</test>
+<test id="s1-t2" name="Verify Login Fails with Invalid Credentials using Admin admin1234 Invalid credentials">
+<kw name="Invalid Login Scenarios">
+<arguments>
+<arg>Admin</arg>
+<arg>admin1234</arg>
+<arg>Invalid credentials</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:44.523" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20220414 18:21:44.604" starttime="20220414 18:21:44.522"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:44.605" level="INFO">Typing text 'admin1234' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20220414 18:21:44.697" starttime="20220414 18:21:44.604"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:44.698" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20220414 18:21:46.195" starttime="20220414 18:21:44.698"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20220414 18:21:48.206" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20220414 18:21:48.206" starttime="20220414 18:21:46.195"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>id=spanMessage</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20220414 18:21:48.217" level="INFO">${count} = 1</msg>
+<status status="PASS" endtime="20220414 18:21:48.217" starttime="20220414 18:21:48.206"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${count} &gt; 0</arg>
+<arg>Element Should Contain</arg>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<arg>ELSE</arg>
+<arg>Element Should Contain</arg>
+<arg>${lnk_dashboard}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:48.242" level="INFO">Element 'id=spanMessage' contains text 'Invalid credentials'.</msg>
+<status status="PASS" endtime="20220414 18:21:48.242" starttime="20220414 18:21:48.218"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:48.242" starttime="20220414 18:21:48.217"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:48.242" starttime="20220414 18:21:44.522"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:48.243" critical="yes" starttime="20220414 18:21:44.521"></status>
+</test>
+<test id="s1-t3" name="Verify Login Fails with Invalid Credentials using Admin  Password cannot be empty">
+<kw name="Invalid Login Scenarios">
+<arguments>
+<arg>Admin</arg>
+<arg>Password cannot be empty</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:48.249" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20220414 18:21:48.349" starttime="20220414 18:21:48.249"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:48.350" level="INFO">Typing text '' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20220414 18:21:48.438" starttime="20220414 18:21:48.349"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:48.438" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20220414 18:21:48.498" starttime="20220414 18:21:48.438"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20220414 18:21:50.502" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20220414 18:21:50.502" starttime="20220414 18:21:48.499"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>id=spanMessage</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20220414 18:21:50.511" level="INFO">${count} = 1</msg>
+<status status="PASS" endtime="20220414 18:21:50.511" starttime="20220414 18:21:50.503"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${count} &gt; 0</arg>
+<arg>Element Should Contain</arg>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<arg>ELSE</arg>
+<arg>Element Should Contain</arg>
+<arg>${lnk_dashboard}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:50.527" level="INFO">Element 'id=spanMessage' contains text 'Password cannot be empty'.</msg>
+<status status="PASS" endtime="20220414 18:21:50.527" starttime="20220414 18:21:50.512"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:50.527" starttime="20220414 18:21:50.512"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:50.527" starttime="20220414 18:21:48.248"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:50.528" critical="yes" starttime="20220414 18:21:48.247"></status>
+</test>
+<test id="s1-t4" name="Verify Login Fails with Invalid Credentials using  admin123 Username cannot be empty">
+<kw name="Invalid Login Scenarios">
+<arguments>
+<arg>admin123</arg>
+<arg>Username cannot be empty</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_username}</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:50.532" level="INFO">Typing text '' into text field 'name=txtUsername'.</msg>
+<status status="PASS" endtime="20220414 18:21:50.598" starttime="20220414 18:21:50.532"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${txtbox_password}</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:50.599" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" endtime="20220414 18:21:50.677" starttime="20220414 18:21:50.599"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${btn_login}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:50.678" level="INFO">Clicking button 'id=btnLogin'.</msg>
+<status status="PASS" endtime="20220414 18:21:50.720" starttime="20220414 18:21:50.678"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20220414 18:21:52.731" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20220414 18:21:52.732" starttime="20220414 18:21:50.720"></status>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<doc>Returns number of elements matching ``locator``.</doc>
+<arguments>
+<arg>id=spanMessage</arg>
+</arguments>
+<assign>
+<var>${count}</var>
+</assign>
+<msg timestamp="20220414 18:21:52.744" level="INFO">${count} = 1</msg>
+<status status="PASS" endtime="20220414 18:21:52.744" starttime="20220414 18:21:52.732"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${count} &gt; 0</arg>
+<arg>Element Should Contain</arg>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+<arg>ELSE</arg>
+<arg>Element Should Contain</arg>
+<arg>${lnk_dashboard}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${txt_error}</arg>
+<arg>${error_msg}</arg>
+</arguments>
+<msg timestamp="20220414 18:21:52.761" level="INFO">Element 'id=spanMessage' contains text 'Username cannot be empty'.</msg>
+<status status="PASS" endtime="20220414 18:21:52.761" starttime="20220414 18:21:52.744"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:52.761" starttime="20220414 18:21:52.744"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:52.761" starttime="20220414 18:21:50.531"></status>
+</kw>
+<status status="PASS" endtime="20220414 18:21:52.762" critical="yes" starttime="20220414 18:21:50.530"></status>
+</test>
+<kw type="teardown" name="CloseApp" library="commonfunctionality">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220409 11:18:26.497" endtime="20220409 11:18:30.611"/>
+<status status="PASS" endtime="20220414 18:21:54.999" starttime="20220414 18:21:52.765"></status>
 </kw>
-<status status="PASS" starttime="20220409 11:18:09.063" endtime="20220409 11:18:30.611"/>
-</test>
+<status status="PASS" endtime="20220414 18:21:55.000" starttime="20220414 18:21:52.765"></status>
+</kw>
 <doc>Suite description</doc>
-<status status="PASS" starttime="20220409 11:18:08.826" endtime="20220409 11:18:30.612"/>
+<status status="PASS" endtime="20220414 18:21:55.000" starttime="20220414 18:21:31.786"></status>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat fail="0" pass="4">Critical Tests</stat>
+<stat fail="0" pass="4">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="OrangeHRM Logo Click">OrangeHRM Logo Click</stat>
+<stat fail="0" id="s1" name="DataDrivenTestCSV" pass="4">DataDrivenTestCSV</stat>
 </suite>
 </statistics>
 <errors>

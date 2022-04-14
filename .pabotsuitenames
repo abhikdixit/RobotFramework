@@ -1,0 +1,8 @@
+datasources:53ee00913e83cedfd50940d7cbf1ef8889a384d9
+commandlineoptions:521e3d24b0460096a6be6cca1adc8f639f72bd5e
+suitesfrom:no-suites-from-option
+file:ee3c67961fc301c11431d59a5a1711a680f8d531
+--suite OrangeHRM.ExplicitWait Example
+--suite OrangeHRM.IfElseDemo
+--suite OrangeHRM.ImplicitWait Example
+--suite OrangeHRM.OrangeHRM AddUser Verify User

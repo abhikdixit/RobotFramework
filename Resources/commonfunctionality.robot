@@ -7,7 +7,7 @@ Resource    ../TestData/ConfigData.robot
 LaunchApplication
     Open Browser        ${url}      ${browser}
     Maximize Browser Window
-    Sleep   2s
+    #Sleep   2s
 CloseApp
     Close Browser
 

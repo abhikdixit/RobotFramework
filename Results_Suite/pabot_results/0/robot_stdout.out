@@ -1,20 +1,19 @@
 ==============================================================================
-Suites                                                                        
+OrangeHRM                                                                     
 ==============================================================================
-Suites.OrangeHRM AddUser :: Suite description                                 
+OrangeHRM.ExplicitWait Example :: Suite description                           
 ==============================================================================
-Launch OrangeHRM and login to application                             | PASS |
+Launch OrangeHRM Login Page                                           | FAIL |
+No keyword with name 'Wait Untill Element Is Visible' found. Did you mean:
+    SeleniumLibrary.Wait Until Element Is Visible
+    SeleniumLibrary.Wait Until Element Is Not Visible
 ------------------------------------------------------------------------------
-Click on Admin->UserManagement->Users and Click on Add button         | PASS |
-------------------------------------------------------------------------------
-Add Users Details and Click on Save button                            | PASS |
-------------------------------------------------------------------------------
-Close Browser                                                         | PASS |
-------------------------------------------------------------------------------
-Suites.OrangeHRM AddUser :: Suite description                         | PASS |
-4 tests, 4 passed, 0 failed
+OrangeHRM.ExplicitWait Example :: Suite description                   | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
 ==============================================================================
-Suites                                                                | PASS |
-4 tests, 4 passed, 0 failed
+OrangeHRM                                                             | FAIL |
+1 critical test, 0 passed, 1 failed
+1 test total, 0 passed, 1 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results_Suite\pabot_results\0\output.xml

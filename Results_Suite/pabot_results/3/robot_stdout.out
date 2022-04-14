@@ -1,14 +1,16 @@
 ==============================================================================
-Suites                                                                        
+OrangeHRM                                                                     
 ==============================================================================
-Suites.OrangeHRM Logo Click :: Suite description                              
+OrangeHRM.OrangeHRM AddUser Verify User :: Suite description                  
 ==============================================================================
-OrangeHRM_Logo_Click                                                  | PASS |
+Launch OrangeHRM and login to application                             | PASS |
 ------------------------------------------------------------------------------
-Suites.OrangeHRM Logo Click :: Suite description                      | PASS |
-1 test, 1 passed, 0 failed
+OrangeHRM.OrangeHRM AddUser Verify User :: Suite description          | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 test, 1 passed, 0 failed
+OrangeHRM                                                             | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results_Suite\pabot_results\3\output.xml

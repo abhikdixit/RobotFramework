@@ -1,15 +1,21 @@
-1623995652336	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofile.a7lFWRhmKn1M"
-1623995653027	Marionette	INFO	Marionette enabled
-JavaScript error: resource://gre/modules/XULStore.jsm, line 66: Error: Can't find profile directory.
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
-1623995656572	Marionette	INFO	Listening on port 55286
-1623995656662	Marionette	WARN	TLS certificate errors will be ignored for this session
-1623995966455	Marionette	INFO	Stopped listening on port 55286
+1649932996427	geckodriver	INFO	Listening on 127.0.0.1:54689
+1649932999510	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilejq62Pd"
+1649932999959	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilejq62Pd\\search.json.mozlz4", (void 0)))
+1649933003087	Marionette	INFO	Listening on port 54701
+1649933003232	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: https://www.crediwatch.com/, line 1: ReferenceError: $ is not defined
+JavaScript error: https://www.crediwatch.com/wp-content/uploads/custom-css-js/8166.js?v=6700, line 1: SyntaxError: expected expression, got '<'
+1649933062032	Marionette	INFO	Stopped listening on port 54701
 
-###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Reply_DiscardBrowsingContext) Closed channel: cannot send/recv
 
-onetteCommandsParent.jsm:327:29
 
-1623855177349	Marionette	INFO	Stopped listening on port 64968
- to send/recv, messages will be lost
+###!!! [Parent][PContentParent] Error: Send(msgname=PContent::Msg_DestroyBrowsingContextGroup) Closed channel: cannot send/recv
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Msg_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
+
+
+###!!! [Child][PContentChild] Error: RunMessage(msgname=PContent::Reply_DiscardBrowsingContext) Channel closing: too late to send/recv, messages will be lost
 
