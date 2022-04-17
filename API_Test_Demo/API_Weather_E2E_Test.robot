@@ -1,6 +1,5 @@
 *** Settings ***
 Documentation  API Testing in Robot Framework
-Library  SeleniumLibrary
 Library  RequestsLibrary
 Library  JSONLibrary
 Library  Collections

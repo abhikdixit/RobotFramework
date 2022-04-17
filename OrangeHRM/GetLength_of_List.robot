@@ -2,7 +2,6 @@
 Documentation    Suite description
 Library     SeleniumLibrary
 
-
 *** Test Cases ***
 Launch OrangeHRM Login Page
 

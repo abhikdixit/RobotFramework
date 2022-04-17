@@ -1,8 +1,12 @@
-datasources:53ee00913e83cedfd50940d7cbf1ef8889a384d9
+datasources:cd64b8ef1980b3fe656f3d453bddb992ce2bec6a
 commandlineoptions:521e3d24b0460096a6be6cca1adc8f639f72bd5e
 suitesfrom:no-suites-from-option
-file:ee3c67961fc301c11431d59a5a1711a680f8d531
+file:dd5a8c99b011549f4f2a7794cb66fcb756f8bca9
 --suite OrangeHRM.ExplicitWait Example
 --suite OrangeHRM.IfElseDemo
 --suite OrangeHRM.ImplicitWait Example
 --suite OrangeHRM.OrangeHRM AddUser Verify User
+--suite OrangeHRM.Dropdown Checkbox RadioButton Example
+--suite OrangeHRM.PageObject OrangeHRM Login
+--suite OrangeHRM.Shadow dom example
+--suite OrangeHRM.Switch Multiple Browser Windows

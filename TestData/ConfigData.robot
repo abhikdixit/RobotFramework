@@ -11,3 +11,5 @@ ${txtbox_password}     name=txtPassword
 ${btn_login}        id=btnLogin
 ${txt_error}        id=spanMessage
 ${lnk_dashboard}    link=Dashboard
+${lnk_welcome}      id=welcome
+${lnk_logout}       link=Logout

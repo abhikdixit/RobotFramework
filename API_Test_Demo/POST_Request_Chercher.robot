@@ -9,7 +9,7 @@ ${base_url}     https://chercher.tech/sample/api/product
 *** Test Cases ***
 POST Employee Details
     create session  mysession   ${base_url}
-    ${body}=        create dictionary   name=RobotTest  description=WelcomeToRobottraining   price=1001
+    ${body}=        create dictionary   name=Robot_Framework_Test  description=WelcomeToRobottraining   price=1001
     ${header}=      create dictionary   Content-Type=application/json
     ${response}=    post request     mysession        /create   data=${body}    headers=${header}
     log to console      ${response.status_code}
@@ -24,4 +24,4 @@ POST Employee Details
 
     ${body}=        convert to string       ${response.content}
     should contain  ${body}     Product was created with UI.
-    should contain    ${resp.text}    RobotTest
+    should contain    ${resp.text}    Robot_Framework_Test
