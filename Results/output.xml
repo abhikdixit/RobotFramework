@@ -1,79 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20220422 15:46:16.659" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
-<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Logo_Click.robot" id="s1" name="OrangeHRM Logo Click">
-<test id="s1-t1" name="OrangeHRM_Logo_Click">
+<robot rpa="false" generated="20220422 16:09:00.200" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\SmartBear_Login.robot" id="s1" name="SmartBear Login">
+<test id="s1-t1" name="Login">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>https://opensource-demo.orangehrmlive.com/</arg>
-<arg>chrome</arg>
+<arg>http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx</arg>
+<arg>Chrome</arg>
 </arguments>
-<msg timestamp="20220422 15:46:17.027" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" endtime="20220422 15:46:25.751" starttime="20220422 15:46:17.027"></status>
+<msg timestamp="20220422 16:09:00.607" level="INFO">Opening browser 'Chrome' to base url 'http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx'.</msg>
+<status status="PASS" endtime="20220422 16:09:06.851" starttime="20220422 16:09:00.607"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20220422 15:46:25.909" starttime="20220422 15:46:25.753"></status>
+<status status="PASS" endtime="20220422 16:09:07.073" starttime="20220422 16:09:06.863"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>name=txtUsername</arg>
-<arg>Admin</arg>
+<arg>id=ctl00_MainContent_username</arg>
+<arg>Tester</arg>
 </arguments>
-<msg timestamp="20220422 15:46:25.913" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
-<status status="PASS" endtime="20220422 15:46:26.238" starttime="20220422 15:46:25.911"></status>
+<msg timestamp="20220422 16:09:07.077" level="INFO">Typing text 'Tester' into text field 'id=ctl00_MainContent_username'.</msg>
+<status status="PASS" endtime="20220422 16:09:07.355" starttime="20220422 16:09:07.075"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>name=txtPassword</arg>
-<arg>admin123</arg>
+<arg>id=ctl00_MainContent_password</arg>
+<arg>test</arg>
 </arguments>
-<msg timestamp="20220422 15:46:26.239" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
-<status status="PASS" endtime="20220422 15:46:26.401" starttime="20220422 15:46:26.239"></status>
+<msg timestamp="20220422 16:09:07.358" level="INFO">Typing text 'test' into text field 'id=ctl00_MainContent_password'.</msg>
+<status status="PASS" endtime="20220422 16:09:07.526" starttime="20220422 16:09:07.357"></status>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <doc>Clicks button identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//input[@id='btnLogin']</arg>
+<arg>id=ctl00_MainContent_login_button</arg>
 </arguments>
-<msg timestamp="20220422 15:46:26.402" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
-<status status="PASS" endtime="20220422 15:46:28.364" starttime="20220422 15:46:26.402"></status>
+<msg timestamp="20220422 16:09:07.527" level="INFO">Clicking button 'id=ctl00_MainContent_login_button'.</msg>
+<status status="PASS" endtime="20220422 16:09:09.512" starttime="20220422 16:09:07.527"></status>
 </kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<doc>Verifies that element ``locator`` contains exact text ``expected``.</doc>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
 <arguments>
-<arg>link=Dashboard</arg>
-<arg>Dashboard</arg>
+<arg>id=ctl00_MainContent_btnDelete</arg>
 </arguments>
-<msg timestamp="20220422 15:46:28.365" level="INFO">Verifying element 'link=Dashboard' contains exact text 'Dashboard'.</msg>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20220422 15:46:28.698" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-167.png"&gt;&lt;img src="selenium-screenshot-167.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20220422 15:46:28.698" starttime="20220422 15:46:28.407"></status>
+<msg timestamp="20220422 16:09:09.544" level="INFO">Current page contains input 'id=ctl00_MainContent_btnDelete'.</msg>
+<status status="PASS" endtime="20220422 16:09:09.544" starttime="20220422 16:09:09.515"></status>
 </kw>
-<msg timestamp="20220422 15:46:28.702" level="FAIL">Element with locator 'link=Dashboard' not found.</msg>
-<status status="FAIL" endtime="20220422 15:46:28.702" starttime="20220422 15:46:28.364"></status>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>Logout</arg>
+</arguments>
+<msg timestamp="20220422 16:09:09.545" level="INFO">Clicking link 'Logout'.</msg>
+<status status="PASS" endtime="20220422 16:09:10.538" starttime="20220422 16:09:09.545"></status>
 </kw>
-<tags>
-<tag>Test</tag>
-</tags>
-<status status="FAIL" endtime="20220422 15:46:28.703" critical="yes" starttime="20220422 15:46:17.025">Element with locator 'link=Dashboard' not found.</status>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<arguments>
+<arg>id=ctl00_MainContent_login_button</arg>
+</arguments>
+<msg timestamp="20220422 16:09:10.575" level="INFO">Current page contains input 'id=ctl00_MainContent_login_button'.</msg>
+<status status="PASS" endtime="20220422 16:09:10.575" starttime="20220422 16:09:10.539"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220422 16:09:13.300" starttime="20220422 16:09:10.576"></status>
+</kw>
+<status status="PASS" endtime="20220422 16:09:13.303" critical="yes" starttime="20220422 16:09:00.605"></status>
 </test>
-<doc>Suite description</doc>
-<status status="FAIL" endtime="20220422 15:46:28.711" starttime="20220422 15:46:16.662"></status>
+<status status="PASS" endtime="20220422 16:09:13.308" starttime="20220422 16:09:00.204"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="1" pass="0">Test</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="OrangeHRM Logo Click" pass="0">OrangeHRM Logo Click</stat>
+<stat fail="0" id="s1" name="SmartBear Login" pass="1">SmartBear Login</stat>
 </suite>
 </statistics>
 <errors>
