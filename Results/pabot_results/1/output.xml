@@ -1,74 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20210617 21:07:59.389" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<robot rpa="false" generated="20220421 11:34:01.938" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
 <suite id="s1" name="Suites">
-<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Login.robot" id="s1-s1" name="OrangeHRM Login">
-<test id="s1-s1-t1" name="Launch OrangeHRM Login Page">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\ScrollTo_Guru99_Element.robot" id="s1-s1" name="ScrollTo Guru99 Element">
+<test id="s1-s1-t1" name="Scroll">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>https://opensource-demo.orangehrmlive.com/index.php</arg>
-<arg>chrome</arg>
+<arg>http://demo.guru99.com/test/guru99home/scrolling.html</arg>
+<arg>Chrome</arg>
 </arguments>
-<msg timestamp="20210617 21:07:59.787" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/index.php'.</msg>
-<status status="PASS" endtime="20210617 21:08:11.052" starttime="20210617 21:07:59.787"></status>
+<msg timestamp="20220421 11:34:02.538" level="INFO">Opening browser 'Chrome' to base url 'http://demo.guru99.com/test/guru99home/scrolling.html'.</msg>
+<status status="PASS" endtime="20220421 11:34:45.619" starttime="20220421 11:34:02.538"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20210617 21:08:13.227" starttime="20210617 21:08:11.052"></status>
+<status status="PASS" endtime="20220421 11:34:45.816" starttime="20220421 11:34:45.619"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
 <arguments>
-<arg>name=txtUsername</arg>
-<arg>Admin</arg>
+<arg>link=VBScript</arg>
 </arguments>
-<msg timestamp="20210617 21:08:13.228" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
-<status status="PASS" endtime="20210617 21:08:13.336" starttime="20210617 21:08:13.227"></status>
+<status status="PASS" endtime="20220421 11:34:47.173" starttime="20220421 11:34:45.817"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>name=txtPassword</arg>
-<arg>admin123</arg>
+<arg>3s</arg>
 </arguments>
-<msg timestamp="20210617 21:08:13.337" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
-<status status="PASS" endtime="20210617 21:08:13.415" starttime="20210617 21:08:13.336"></status>
+<msg timestamp="20220421 11:34:50.186" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220421 11:34:50.186" starttime="20220421 11:34:47.173"></status>
 </kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>xpath=//input[@id='btnLogin']</arg>
+<arg>VBScript</arg>
 </arguments>
-<msg timestamp="20210617 21:08:13.416" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
-<status status="PASS" endtime="20210617 21:08:27.005" starttime="20210617 21:08:13.415"></status>
+<msg timestamp="20220421 11:34:50.187" level="INFO">Clicking link 'VBScript'.</msg>
+<status status="PASS" endtime="20220421 11:34:50.535" starttime="20220421 11:34:50.186"></status>
 </kw>
-<kw name="Sleep 2s">
-<msg timestamp="20210617 21:08:27.010" level="FAIL">No keyword with name 'Sleep 2s' found. Did you mean:
-    BuiltIn.Sleep</msg>
-<status status="FAIL" endtime="20210617 21:08:27.010" starttime="20210617 21:08:27.010"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20220421 11:34:53.547" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20220421 11:34:53.547" starttime="20220421 11:34:50.536"></status>
 </kw>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="FAIL" endtime="20210617 21:08:27.010" critical="yes" starttime="20210617 21:07:59.785">No keyword with name 'Sleep 2s' found. Did you mean:
-    BuiltIn.Sleep</status>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20220421 11:34:58.364" starttime="20220421 11:34:53.548"></status>
+</kw>
+<status status="PASS" endtime="20220421 11:34:58.365" critical="yes" starttime="20220421 11:34:02.537"></status>
 </test>
-<doc>Suite description</doc>
-<status status="FAIL" endtime="20210617 21:08:27.012" starttime="20210617 21:07:59.430"></status>
+<status status="PASS" endtime="20220421 11:34:58.368" starttime="20220421 11:34:01.998"></status>
 </suite>
-<status status="FAIL" endtime="20210617 21:08:27.015" starttime="20210617 21:07:59.393"></status>
+<status status="PASS" endtime="20220421 11:34:58.374" starttime="20220421 11:34:01.943"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="1" pass="0">Smoke</stat>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Suites" pass="0">Suites</stat>
-<stat fail="1" id="s1-s1" name="OrangeHRM Login" pass="0">Suites.OrangeHRM Login</stat>
+<stat fail="0" id="s1" name="Suites" pass="1">Suites</stat>
+<stat fail="0" id="s1-s1" name="ScrollTo Guru99 Element" pass="1">Suites.ScrollTo Guru99 Element</stat>
 </suite>
 </statistics>
 <errors>

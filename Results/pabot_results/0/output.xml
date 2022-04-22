@@ -1,199 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20210617 21:07:59.381" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
+<robot rpa="false" generated="20220421 11:34:01.932" generator="Robot 3.2.2 (Python 2.7.16 on win32)">
 <suite id="s1" name="Suites">
-<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_AddUser.robot" id="s1-s1" name="OrangeHRM AddUser">
-<test id="s1-s1-t1" name="Launch OrangeHRM and login to application">
+<suite source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\ScrollTo_Element.robot" id="s1-s1" name="ScrollTo Element">
+<test id="s1-s1-t1" name="Scroll">
 <kw name="Open Browser" library="SeleniumLibrary">
 <doc>Opens a new browser instance to the given ``url``.</doc>
 <arguments>
-<arg>https://opensource-demo.orangehrmlive.com/</arg>
-<arg>chrome</arg>
+<arg>https://demo.spreecommerce.org/</arg>
+<arg>Chrome</arg>
 </arguments>
-<msg timestamp="20210617 21:07:59.783" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
-<status status="PASS" endtime="20210617 21:08:10.968" starttime="20210617 21:07:59.782"></status>
+<msg timestamp="20220421 11:34:02.525" level="INFO">Opening browser 'Chrome' to base url 'https://demo.spreecommerce.org/'.</msg>
+<status status="PASS" endtime="20220421 11:34:22.399" starttime="20220421 11:34:02.525"></status>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" endtime="20210617 21:08:13.193" starttime="20210617 21:08:10.968"></status>
+<status status="PASS" endtime="20220421 11:34:23.897" starttime="20220421 11:34:22.400"></status>
 </kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<doc>Scrolls an element identified by ``locator`` into view.</doc>
 <arguments>
-<arg>xpath://input[@id='txtUsername']</arg>
-<arg>Admin</arg>
+<arg>link=Spark Solutions</arg>
 </arguments>
-<msg timestamp="20210617 21:08:13.194" level="INFO">Typing text 'Admin' into text field 'xpath://input[@id='txtUsername']'.</msg>
-<status status="PASS" endtime="20210617 21:08:13.331" starttime="20210617 21:08:13.194"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>name=txtPassword</arg>
-<arg>admin123</arg>
-</arguments>
-<msg timestamp="20210617 21:08:13.332" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
-<status status="PASS" endtime="20210617 21:08:13.406" starttime="20210617 21:08:13.331"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>css=input[id='btnLogin']</arg>
-</arguments>
-<msg timestamp="20210617 21:08:13.408" level="INFO">Clicking button 'css=input[id='btnLogin']'.</msg>
-<status status="PASS" endtime="20210617 21:08:23.147" starttime="20210617 21:08:13.406"></status>
-</kw>
-<kw name="Page Should Contain Link" library="SeleniumLibrary">
-<doc>Verifies link identified by ``locator`` is found from current page.</doc>
-<arguments>
-<arg>Dashboard</arg>
-</arguments>
-<msg timestamp="20210617 21:08:23.171" level="INFO">Current page contains link 'Dashboard'.</msg>
-<status status="PASS" endtime="20210617 21:08:23.171" starttime="20210617 21:08:23.147"></status>
-</kw>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" endtime="20210617 21:08:23.172" critical="yes" starttime="20210617 21:07:59.781"></status>
-</test>
-<test id="s1-s1-t2" name="Click on Admin-&gt;UserManagement-&gt;Users and Click on Add button">
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
-<arguments>
-<arg>link=Admin</arg>
-</arguments>
-<msg timestamp="20210617 21:08:23.175" level="INFO">Simulating Mouse Over on element 'link=Admin'.</msg>
-<status status="PASS" endtime="20210617 21:08:23.251" starttime="20210617 21:08:23.174"></status>
+<status status="PASS" endtime="20220421 11:34:25.419" starttime="20220421 11:34:23.898"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>2s</arg>
+<arg>5s</arg>
 </arguments>
-<msg timestamp="20210617 21:08:25.252" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20210617 21:08:25.252" starttime="20210617 21:08:23.251"></status>
-</kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<doc>Simulates hovering mouse over the element ``locator``.</doc>
-<arguments>
-<arg>link=User Management</arg>
-</arguments>
-<msg timestamp="20210617 21:08:25.253" level="INFO">Simulating Mouse Over on element 'link=User Management'.</msg>
-<status status="PASS" endtime="20210617 21:08:25.322" starttime="20210617 21:08:25.252"></status>
+<msg timestamp="20220421 11:34:30.491" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20220421 11:34:30.493" starttime="20220421 11:34:25.419"></status>
 </kw>
 <kw name="Click Link" library="SeleniumLibrary">
 <doc>Clicks a link identified by ``locator``.</doc>
 <arguments>
-<arg>link=Users</arg>
+<arg>link=Spark Solutions</arg>
 </arguments>
-<msg timestamp="20210617 21:08:25.323" level="INFO">Clicking link 'link=Users'.</msg>
-<status status="PASS" endtime="20210617 21:08:26.867" starttime="20210617 21:08:25.323"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>btnAdd</arg>
-</arguments>
-<msg timestamp="20210617 21:08:26.868" level="INFO">Clicking button 'btnAdd'.</msg>
-<status status="PASS" endtime="20210617 21:08:27.862" starttime="20210617 21:08:26.867"></status>
-</kw>
-<status status="PASS" endtime="20210617 21:08:27.862" critical="yes" starttime="20210617 21:08:23.173"></status>
-</test>
-<test id="s1-s1-t3" name="Add Users Details and Click on Save button">
-<kw name="Select From List By Label" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<arguments>
-<arg>id=systemUser_userType</arg>
-<arg>Admin</arg>
-</arguments>
-<msg timestamp="20210617 21:08:27.863" level="INFO">Selecting options from selection list 'id=systemUser_userType' by label Admin.</msg>
-<status status="PASS" endtime="20210617 21:08:27.962" starttime="20210617 21:08:27.863"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=systemUser_employeeName_empName</arg>
-<arg>Fiona Grace</arg>
-</arguments>
-<msg timestamp="20210617 21:08:27.962" level="INFO">Typing text 'Fiona Grace' into text field 'id=systemUser_employeeName_empName'.</msg>
-<status status="PASS" endtime="20210617 21:08:28.107" starttime="20210617 21:08:27.962"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=systemUser_userName</arg>
-<arg>Kumar</arg>
-</arguments>
-<msg timestamp="20210617 21:08:28.108" level="INFO">Typing text 'Kumar' into text field 'id=systemUser_userName'.</msg>
-<status status="PASS" endtime="20210617 21:08:28.232" starttime="20210617 21:08:28.107"></status>
-</kw>
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<arguments>
-<arg>id=systemUser_status</arg>
-<arg>1</arg>
-</arguments>
-<msg timestamp="20210617 21:08:28.233" level="INFO">Selecting options from selection list 'id=systemUser_status' by value 1.</msg>
-<status status="PASS" endtime="20210617 21:08:28.287" starttime="20210617 21:08:28.233"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=systemUser_password</arg>
-<arg>admin123</arg>
-</arguments>
-<msg timestamp="20210617 21:08:28.287" level="INFO">Typing text 'admin123' into text field 'id=systemUser_password'.</msg>
-<status status="PASS" endtime="20210617 21:08:28.438" starttime="20210617 21:08:28.287"></status>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
-<arguments>
-<arg>id=systemUser_confirmPassword</arg>
-<arg>admin123</arg>
-</arguments>
-<msg timestamp="20210617 21:08:28.440" level="INFO">Typing text 'admin123' into text field 'id=systemUser_confirmPassword'.</msg>
-<status status="PASS" endtime="20210617 21:08:28.613" starttime="20210617 21:08:28.438"></status>
-</kw>
-<kw name="Click Button" library="SeleniumLibrary">
-<doc>Clicks button identified by ``locator``.</doc>
-<arguments>
-<arg>id=btnSave</arg>
-</arguments>
-<msg timestamp="20210617 21:08:28.614" level="INFO">Clicking button 'id=btnSave'.</msg>
-<status status="PASS" endtime="20210617 21:08:28.738" starttime="20210617 21:08:28.613"></status>
+<msg timestamp="20220421 11:34:30.497" level="INFO">Clicking link 'link=Spark Solutions'.</msg>
+<status status="PASS" endtime="20220421 11:34:38.277" starttime="20220421 11:34:30.496"></status>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>2s</arg>
+<arg>5s</arg>
 </arguments>
-<msg timestamp="20210617 21:08:30.753" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" endtime="20210617 21:08:30.755" starttime="20210617 21:08:28.739"></status>
+<msg timestamp="20220421 11:34:43.289" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" endtime="20220421 11:34:43.290" starttime="20220421 11:34:38.277"></status>
 </kw>
-<status status="PASS" endtime="20210617 21:08:30.755" critical="yes" starttime="20210617 21:08:27.862"></status>
-</test>
-<test id="s1-s1-t4" name="Close Browser">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" endtime="20210617 21:08:34.913" starttime="20210617 21:08:30.756"></status>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20220421 11:34:49.234" starttime="20220421 11:34:43.290"></status>
 </kw>
-<status status="PASS" endtime="20210617 21:08:34.913" critical="yes" starttime="20210617 21:08:30.756"></status>
+<status status="PASS" endtime="20220421 11:34:49.235" critical="yes" starttime="20220421 11:34:02.524"></status>
 </test>
-<doc>Suite description</doc>
-<status status="PASS" endtime="20210617 21:08:34.915" starttime="20210617 21:07:59.421"></status>
+<status status="PASS" endtime="20220421 11:34:49.236" starttime="20220421 11:34:01.992"></status>
 </suite>
-<status status="PASS" endtime="20210617 21:08:34.924" starttime="20210617 21:07:59.384"></status>
+<status status="PASS" endtime="20220421 11:34:49.240" starttime="20220421 11:34:01.939"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="4">Critical Tests</stat>
-<stat fail="0" pass="4">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat fail="0" pass="1">Smoke</stat>
 </tag>
 <suite>
-<stat fail="0" id="s1" name="Suites" pass="4">Suites</stat>
-<stat fail="0" id="s1-s1" name="OrangeHRM AddUser" pass="4">Suites.OrangeHRM AddUser</stat>
+<stat fail="0" id="s1" name="Suites" pass="1">Suites</stat>
+<stat fail="0" id="s1-s1" name="ScrollTo Element" pass="1">Suites.ScrollTo Element</stat>
 </suite>
 </statistics>
 <errors>

@@ -12,3 +12,6 @@ Logout
     Wait Until Element Is Visible  ${LogoutButton}  timeout=5
     Click Element  ${LogoutButton}
     Wait Until Element Is Visible  ${LoginUsernameInputBox}  timeout=5
+Admin
+
+PIM

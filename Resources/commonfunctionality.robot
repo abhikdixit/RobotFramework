@@ -25,4 +25,4 @@ Click On Logout Link
     Sleep       2s
     Click link      ${lnk_logout}
 Verify Home Page
-    Page Should Contain     Admin
+    Page Should Contain     Dashboard

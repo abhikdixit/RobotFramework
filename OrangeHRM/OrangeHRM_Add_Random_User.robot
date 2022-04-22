@@ -23,7 +23,7 @@ Click on Admin->UserManagement->Users and Click on Add button
 Add Users Details and Click on Save button
     ${random_num} =     Generate Random String
     ${empname}=     Catenate    SEPARATOR=    Abhi    ${random_num}
-    Log to Console      ${empname}
+    LOG TO CONSOLE      ${empname}
     Select From List By Label    id=systemUser_userType    Admin
     Input Text  id=systemUser_employeeName_empName  Fiona Grace
     Input Text  id=systemUser_userName  ${empname}
@@ -32,9 +32,7 @@ Add Users Details and Click on Save button
     Input Text  id=systemUser_confirmPassword  admin123
     Click Button    id=btnSave
     Sleep   5s
-    #Verify that added user visible in WebTable and able to select the checkbox
-    Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
-    Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
-    Sleep   5s
+    Page Should Contain Link        link=${empname}
+
 Close Browser at end
     Close Browser

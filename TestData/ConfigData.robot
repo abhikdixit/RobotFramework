@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Variables ***
 ${url}      https://opensource-demo.orangehrmlive.com/index.php/auth/login
-${browser}      chrome
+${browser}      firefox
 #Below variables are related to application object identification
 ${txtbox_username}     name=txtUsername
 ${txtbox_password}     name=txtPassword

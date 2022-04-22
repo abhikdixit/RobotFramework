@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 *** Test Cases ***
 Launch OrangeHRM Login Page
 
-    Open Browser    https://opensource-demo.orangehrmlive.com/  headlesschrome
+    Open Browser    https://opensource-demo.orangehrmlive.com/  headlessfirefox
     Maximize Browser Window
     Input Text	name=txtUsername	Admin
     Input Text	name=txtPassword	admin123

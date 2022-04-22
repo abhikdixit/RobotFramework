@@ -15,5 +15,6 @@ Launch OrangeHRM Login Page
     Sleep   2s
     ${currenturl}=       Get Location
     Log to console      ${currenturl}
+    Title Should Be     OrangeHRM
     Sleep   2s
     Close Browser

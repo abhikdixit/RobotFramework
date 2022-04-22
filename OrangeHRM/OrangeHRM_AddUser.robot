@@ -7,7 +7,7 @@ Launch OrangeHRM and login to application
     [Tags]    Sanity
     Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
     Maximize Browser Window
-    Input Text	xpath://input[@id='txtUsername']	Admin
+    Input Text	xpath://input[@id='txtUsername']	abhi1
     Input Text	name=txtPassword	admin123
     #Click Button	xpath=//input[@id='btnLogin']
     Click Button	css=input[id='btnLogin']
@@ -24,11 +24,12 @@ Add Users Details and Click on Save button
 
     Select From List By Label    id=systemUser_userType    Admin
     Input Text  id=systemUser_employeeName_empName  Fiona Grace
-    Input Text  id=systemUser_userName  Kumar
+    Input Text  id=systemUser_userName  kumar
     Select From List By Value   id=systemUser_status    1
     Input Text  id=systemUser_password  admin123
     Input Text  id=systemUser_confirmPassword  admin123
     Click Button    id=btnSave
     Sleep   2s
+    Page Should Contain Link        link=Kumar
 Close Browser
     Close browser

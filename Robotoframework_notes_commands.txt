@@ -18,6 +18,10 @@ pabot --processes 2 --outputdir Results_Suite -i Smoke OrangeHRM
 robot -d Results -i Smoke -i Sanity -i Regression .\OrangeHRM\Tags_Group_Ex
 ample.robot
 
+#Only Smoke
+
+robot -d Results -i Smoke .\OrangeHRM\Tags_Group_Example.robot
+
 # Exclude Particular Tags using -e
  robot -d Results -e Smoke -i Sanity -e Regression .\OrangeHRM\Tags_Group_Ex
 ample.robot

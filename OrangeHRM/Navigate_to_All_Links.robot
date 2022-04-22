@@ -2,7 +2,7 @@
 Documentation    Suite description
 Library     SeleniumLibrary
 Library     Collections
-
+Library     OperatingSystem
 *** Test Cases ***
 Navigate to All links of google
     Open Browser    https://opensource-demo.orangehrmlive.com/index.php/auth/login  chrome
@@ -16,10 +16,13 @@ Navigate to All links of google
         Log to Console    ${href}
         #Append all grabbed href to List String
         Append To List  ${hrefList}  ${href}
+        ${str}=    Append to file    TestData/test_file.txt    ${href}\n
+        Log to console      ${str}
    END
    # Run loop on top of Appended list to navigate each link
    FOR     ${href1}    IN      @{hrefList}
-         Go To       ${href1}
+         GoTo       ${href1}
          Sleep   2s
+
    END
    Close Browser

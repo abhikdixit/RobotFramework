@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Test Cases ***
 Launch OrangeHRM Login Page
-    [Tags]    Sanity
+    [Tags]    Test
     Open Browser    https://opensource-demo.orangehrmlive.com/index.php     chrome
     Maximize Browser Window
     Input Text	name=txtUsername	Admin

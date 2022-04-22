@@ -1,22 +1,16 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.OrangeHRM AddUser :: Suite description                                 
+Suites.ScrollTo Element                                                       
 ==============================================================================
-Launch OrangeHRM and login to application                             | PASS |
+Scroll                                                                | PASS |
 ------------------------------------------------------------------------------
-Click on Admin->UserManagement->Users and Click on Add button         | PASS |
-------------------------------------------------------------------------------
-Add Users Details and Click on Save button                            | PASS |
-------------------------------------------------------------------------------
-Close Browser                                                         | PASS |
-------------------------------------------------------------------------------
-Suites.OrangeHRM AddUser :: Suite description                         | PASS |
-4 critical tests, 4 passed, 0 failed
-4 tests total, 4 passed, 0 failed
+Suites.ScrollTo Element                                               | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
 Suites                                                                | PASS |
-4 critical tests, 4 passed, 0 failed
-4 tests total, 4 passed, 0 failed
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\0\output.xml

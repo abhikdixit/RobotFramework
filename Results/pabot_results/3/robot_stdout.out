@@ -1,17 +1,16 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.OrangeHRM Logo Click :: Suite description                              
+Suites.ScrollTo PageDown PointByPoint                                         
 ==============================================================================
-OrangeHRM_Logo_Click                                                  | FAIL |
-Button with locator 'Get a Free Demo' not found.
+Scroll                                                                | PASS |
 ------------------------------------------------------------------------------
-Suites.OrangeHRM Logo Click :: Suite description                      | FAIL |
-1 critical test, 0 passed, 1 failed
-1 test total, 0 passed, 1 failed
+Suites.ScrollTo PageDown PointByPoint                                 | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
-Suites                                                                | FAIL |
-1 critical test, 0 passed, 1 failed
-1 test total, 0 passed, 1 failed
+Suites                                                                | PASS |
+1 critical test, 1 passed, 0 failed
+1 test total, 1 passed, 0 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\3\output.xml

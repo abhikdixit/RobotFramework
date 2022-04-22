@@ -36,7 +36,17 @@ Add Users Details and Click on Save button
     Sleep   5s
 Verify that added user visible in WebTable and able to select the checkbox
     Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
-    Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
+    #Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
+    Sleep   5s
+Delete the user from WebTable
+    #//a[normalize-space()='${empname}']//parent::td/../td/input
+    #Verify that added user visible in WebTable and able to select the checkbox
+    #Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
+    Click Element       xpath=//a[normalize-space()='${empname}']//parent::td/../td/input
+    Sleep   5s
+    Click Element       id=btnDelete
+    Sleep   2s
+    Click Element       id=dialogDeleteBtn
     Sleep   5s
 Close Browser at end
     Close Browser

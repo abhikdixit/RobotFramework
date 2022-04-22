@@ -10,6 +10,7 @@ Example of how to load JSON
     ${json}=    Get file    TestData/Login.json
 # convert the data to a python object
     ${object}=  Evaluate    json.loads('''${json}''')   json
+    Log to console      ${object}
 # Read the data from JSON and pass to application
     Open Browser    ${object["url"]}  chrome
     Maximize Browser Window

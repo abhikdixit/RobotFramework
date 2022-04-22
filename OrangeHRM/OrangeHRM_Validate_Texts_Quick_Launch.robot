@@ -4,10 +4,11 @@ Library  SeleniumLibrary
 Library  Collections
 
 *** Variables ***
+#Expected Value
 @{quickLaunchList}  Assign Leave  Leave List  Timesheets  Apply Leave  My Leave  My Timesheet
 
 *** Test Cases ***
-Verify that all the quick launch texts is same as our Text list
+TS_001
     [documentation]  This test case verifies that the quick launch texts from the webpage matches our Text list.
     Open Browser  https://opensource-demo.orangehrmlive.com/  Chrome
     Wait Until Element Is Visible  id:txtUsername  timeout=5

@@ -4,6 +4,7 @@ Library  SeleniumLibrary
 
 *** Test Cases ***
 OrangeHRM_Logo_Click
+    [Tags]      Test
     Open Browser    https://opensource-demo.orangehrmlive.com/    chrome
     Maximize Browser Window
     Input Text    name=txtUsername    Admin

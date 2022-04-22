@@ -5,6 +5,7 @@ Library     SeleniumLibrary
 *** Variables ***
 #List Variables
 @{search_text}  mobile      tv      ipad
+
 *** Test Cases ***
 Search for Product
     Open Browser	https://www.amazon.in/	chrome
