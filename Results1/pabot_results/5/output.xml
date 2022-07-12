@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220712 14:18:44.012" rpa="false" schemaversion="2">
+<suite id="s1" name="WebOrder Add Order DeleteOrder" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\WebOrder_Add_Order_DeleteOrder.robot">
+<test id="s1-t1" name="Logout and Close Browser at end">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220712 14:18:45.422" level="INFO">Clicking link 'Logout'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220712 14:18:45.423" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220712 14:18:45.422" endtime="20220712 14:18:45.424"/>
+</kw>
+<msg timestamp="20220712 14:18:45.433" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20220712 14:18:45.420" endtime="20220712 14:18:45.434"/>
+</kw>
+<kw name="Page Should Contain Button" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_login_button</arg>
+<doc>Verifies button ``locator`` is found from current page.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:45.435" endtime="20220712 14:18:45.436"/>
+</kw>
+<status status="FAIL" starttime="20220712 14:18:45.417" endtime="20220712 14:18:45.436">No browser is open.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20220712 14:18:44.071" endtime="20220712 14:18:45.439"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WebOrder Add Order DeleteOrder">WebOrder Add Order DeleteOrder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

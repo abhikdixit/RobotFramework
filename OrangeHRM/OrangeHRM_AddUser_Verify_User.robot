@@ -25,7 +25,7 @@ Add Users Details and Click on Save button
     [documentation]  Enter all mandatory details to Add user.
     Select From List By Label    id=systemUser_userType    Admin
     Input Text  id=systemUser_employeeName_empName  Fiona Grace
-    Input Text  id=systemUser_userName  Kumar222
+    Input Text  id=systemUser_userName  Kumar
     Select From List By Value   id=systemUser_status    1
     Input Text  id=systemUser_password  admin123
     Input Text  id=systemUser_confirmPassword  admin123
@@ -33,10 +33,10 @@ Add Users Details and Click on Save button
     Sleep   2s
 Verify that User added to WebTable
     [documentation]  Verify that Added user display in Search WebTable List
-    Table Should Contain        xpath=//table[@id='resultTable']        Kumar22
+    Table Should Contain        xpath=//table[@id='resultTable']        Kumar
     #Element Text Should Be	xpath=//a[text()='Kumar22'] 	Kumar22
     Sleep   2s
-    Click Element       xpath=//a[text()='Kumar222']//parent::td/../td/input
+    Click Element       xpath=//a[text()='Kumar']//parent::td/../td/input
     Sleep   5s
 Close Browser at end
     Close Browser

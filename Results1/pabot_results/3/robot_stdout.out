@@ -1,0 +1,10 @@
+==============================================================================
+WebOrder Add Order DeleteOrder :: Suite description                           
+==============================================================================
+Edit the State field and Verify that its Updated                      | FAIL |
+No browser is open.
+------------------------------------------------------------------------------
+WebOrder Add Order DeleteOrder :: Suite description                   | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results1\pabot_results\3\output.xml

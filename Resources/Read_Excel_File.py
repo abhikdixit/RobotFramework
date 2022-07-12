@@ -2,25 +2,26 @@ from RPA.Excel.Files import Files
 from RPA.Tables import Tables
 
 
-class Orders:
-    def get_orders(self, excel):
-        files = Files()
-        workbook = files.open_workbook(excel)
-        rows = workbook.read_worksheet(header=True)
+# excel="testdata/OrangeData.xlsx"
+def get_orders(excel):
+    files = Files()
+    workbook = files.open_workbook(excel)
+    rows = workbook.read_worksheet(header=True)
 
-        tables = Tables()
-        table = tables.create_table(rows)
-        tables.filter_empty_rows(table)
+    tables = Tables()
+    table = tables.create_table(rows)
+    tables.filter_empty_rows(table)
 
-        orders = []
-        for row in table:
-            #first_name, last_name = row["Name"].split()
-            order = {
-                #"item": row["Item"],
-                #"zip": int(row["Zip"]),
-                "first_name": "uname",
-                "last_name": "password"
-            }
-            orders.append(order)
+    orders = []
+    for row in table:
+        order = {
+            "username": row["uname"],
+            "pass": row["password"]
+        }
+        orders.append(order)
 
-        return orders
+    return orders
+
+
+x = get_orders("D:\\F Drive\\RobotFramework_NewVersion\\testdata\\OrangeData.xlsx")
+print(x)

@@ -10,5 +10,5 @@ def retrieve_a_country():
     name_value = json_string[0]["name"]
     print(name_value)
     return name_value
-x=test_get_id_details()
-print(x)
+#x=test_get_id_details()
+#print(x)

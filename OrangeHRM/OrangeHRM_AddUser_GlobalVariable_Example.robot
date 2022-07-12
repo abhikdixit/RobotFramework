@@ -4,6 +4,7 @@ Library     SeleniumLibrary
 Library     String
 
 *** Test Cases ***
+
 Launch OrangeHRM and login to application
     Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
     Maximize Browser Window
@@ -38,7 +39,7 @@ Verify that added user visible in WebTable and able to select the checkbox
     Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
     #Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
     Sleep   5s
-Delete the user from WebTable
+Delete the user from WebTable and verify
     #//a[normalize-space()='${empname}']//parent::td/../td/input
     #Verify that added user visible in WebTable and able to select the checkbox
     #Table Should Contain        xpath=//table[@id='resultTable']        ${empname}

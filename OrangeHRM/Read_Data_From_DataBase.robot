@@ -4,7 +4,7 @@ Library     OperatingSystem
 Library     SeleniumLibrary
 Library     Collections
 *** Variables ***
-${dbname}       weborders
+${dbname}       orangehrm
 ${dbuser}       root
 ${dbpasswd}     root
 ${dbhost}       localhost

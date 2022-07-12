@@ -26,3 +26,4 @@ Click On Logout Link
     Click link      ${lnk_logout}
 Verify Home Page
     Page Should Contain     Dashboard
+

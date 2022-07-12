@@ -1,13 +1,13 @@
-1650524555757	geckodriver	INFO	Listening on 127.0.0.1:64863
-1650524558831	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileQsQ3Ty"
-1650524559510	Marionette	INFO	Marionette enabled
-console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileQsQ3Ty\\search.json.mozlz4", (void 0)))
-1650524563758	Marionette	INFO	Listening on port 64876
-1650524564168	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1654704298791	geckodriver	INFO	Listening on 127.0.0.1:51602
+1654704301862	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileTlcwYC"
+1654704302472	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileTlcwYC\\search.json.mozlz4", (void 0)))
+1654704304651	Marionette	INFO	Listening on port 51612
+1654704305055	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://opensource-demo1.orangehrmlive.com"
 console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://opensource-demo1.orangehrmlive.com"
 JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
-1650524588787	Marionette	INFO	Stopped listening on port 64876
+1654704321849	Marionette	INFO	Stopped listening on port 51612
 JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]
 
 ###!!! [Parent][PGPUParent] Error: RunMessage(msgname=PGPU::Msg_ShutdownVR) Channel closing: too late to send/recv, messages will be lost

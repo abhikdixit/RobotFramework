@@ -20,6 +20,7 @@ Launch OrangeHRM Login Page
     @{ActualLinkList}=    Create List
     FOR     ${i}  IN RANGE      1   ${AllLinksCount}+1
         ${text}=    Get Text    xpath=(//a)[${i}]
+
         Log to Console    ${text}
         Append To List  ${ActualLinkList}  ${text}
     END

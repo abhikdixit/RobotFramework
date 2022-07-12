@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\TestData\OrangeHRM_LoginData.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\TestData\SwagLab_TestData.csv">
           <value>
             <Attribute>

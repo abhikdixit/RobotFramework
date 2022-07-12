@@ -16,5 +16,7 @@ Launch OrangeHRM Login Page
     ${currenturl}=       Get Location
     Log to console      ${currenturl}
     Title Should Be     OrangeHRM
+    Element Text Should Be	xpath=//div[@id='logInPanelHeading']       LOGIN Panel
     Sleep   2s
+
     Close Browser

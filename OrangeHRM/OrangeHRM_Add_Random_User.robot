@@ -22,7 +22,7 @@ Click on Admin->UserManagement->Users and Click on Add button
     Click Button	name=btnAdd
 Add Users Details and Click on Save button
     ${random_num} =     Generate Random String
-    ${empname}=     Catenate    SEPARATOR=    Abhi    ${random_num}
+    ${empname}=     Catenate    Abhi    ${random_num}
     LOG TO CONSOLE      ${empname}
     Select From List By Label    id=systemUser_userType    Admin
     Input Text  id=systemUser_employeeName_empName  Fiona Grace
@@ -35,4 +35,6 @@ Add Users Details and Click on Save button
     Page Should Contain Link        link=${empname}
 
 Close Browser at end
+
+    #LOG TO CONSOLE      ${empname}
     Close Browser

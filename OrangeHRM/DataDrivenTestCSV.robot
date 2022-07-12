@@ -2,7 +2,7 @@
 Documentation    Suite description
 Library     SeleniumLibrary
 Resource    ../Resources/commonfunctionality.robot
-Library     DataDriver      ../TestData/SwagLab_TestData.csv
+Library     DataDriver      ../TestData/OrangeHRM_LoginData.csv
 
 Suite Setup     LaunchApplication
 Suite Teardown  CloseApp

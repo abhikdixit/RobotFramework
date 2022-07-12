@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220712 14:18:36.217" rpa="false" schemaversion="2">
+<suite id="s1" name="WebOrder Add Order DeleteOrder" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\WebOrder_Add_Order_DeleteOrder.robot">
+<test id="s1-t1" name="Click on Order and Enter the Details">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Order</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220712 14:18:36.974" level="INFO">Clicking link 'link=Order'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220712 14:18:36.975" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20220712 14:18:36.974" endtime="20220712 14:18:36.976"/>
+</kw>
+<msg timestamp="20220712 14:18:36.984" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20220712 14:18:36.972" endtime="20220712 14:18:36.984"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.985" endtime="20220712 14:18:36.987"/>
+</kw>
+<kw name="Select From List By Label" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_ddlProduct</arg>
+<arg>FamilyAlbum</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.988" endtime="20220712 14:18:36.989"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtName</arg>
+<arg>Dixit</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.990" endtime="20220712 14:18:36.991"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtQuantity</arg>
+<arg>5</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.991" endtime="20220712 14:18:36.992"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox2</arg>
+<arg>MG Road</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.993" endtime="20220712 14:18:36.994"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox3</arg>
+<arg>Bangalore</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.994" endtime="20220712 14:18:36.995"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox5</arg>
+<arg>560001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.996" endtime="20220712 14:18:36.996"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>ctl00$MainContent$fmwOrder$cardList</arg>
+<arg>Visa</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.997" endtime="20220712 14:18:36.998"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox6</arg>
+<arg>123456789</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:36.999" endtime="20220712 14:18:37.000"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox1</arg>
+<arg>12/22</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:37.001" endtime="20220712 14:18:37.002"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_InsertButton</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:18:37.003" endtime="20220712 14:18:37.004"/>
+</kw>
+<status status="FAIL" starttime="20220712 14:18:36.970" endtime="20220712 14:18:37.005">No browser is open.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20220712 14:18:36.250" endtime="20220712 14:18:37.008"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="WebOrder Add Order DeleteOrder">WebOrder Add Order DeleteOrder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

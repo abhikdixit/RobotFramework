@@ -26,8 +26,8 @@ Switch between Browser windows using 'Get Window Handles' and verify the text
     Wait Until Element Is Visible  tag:h3  timeout=5
     Click Element  css:[href="/windows/new"]
     ${handles}=  Get Window Handles
-    Select Window       ${handles}[0]
+    switch window       ${handles}[0]
     Element Text Should Be  tag:h3  Opening a new window  timeout=5
-    Select Window       ${handles}[1]
+    switch window       ${handles}[1]
     Element Text Should Be  tag:h3  New Window  timeout=5
     Close Browser

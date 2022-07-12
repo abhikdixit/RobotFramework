@@ -5,6 +5,7 @@ Library     String
 
 *** Test Cases ***
 TC_001-Launch WebOrder and login to application
+    [Tags]      Test
     Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    Chrome
     Maximize Browser Window
     Input Text    id=ctl00_MainContent_username    Tester
@@ -50,4 +51,6 @@ Delete the user and Verify that user got deleted from WebTable
 Logout and Close Browser at end
     Click Link      Logout
     Page Should Contain Button    id=ctl00_MainContent_login_button
+
+Close Browser at end
     Close Browser

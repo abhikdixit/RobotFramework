@@ -10,14 +10,14 @@ Navigate to All links of google
     @{element_list}=        Get WebElements     xpath=//a
     #Create Empty List String to store all href
     @{hrefList}=    Create List
+    create file    TestData/test_file.txt
    FOR     ${link}  IN      @{element_list}
    # Search for Attribute which is having href to grab the link
         ${href}=    Get Element Attribute    ${link}        href
         Log to Console    ${href}
         #Append all grabbed href to List String
         Append To List  ${hrefList}  ${href}
-        ${str}=    Append to file    TestData/test_file.txt    ${href}\n
-        Log to console      ${str}
+        Append to file    TestData/test_file.txt    ${href}\n
    END
    # Run loop on top of Appended list to navigate each link
    FOR     ${href1}    IN      @{hrefList}
@@ -25,4 +25,4 @@ Navigate to All links of google
          Sleep   2s
 
    END
-   Close Browser
+   close browser

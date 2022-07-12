@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220712 14:36:06.512" rpa="false" schemaversion="2">
+<suite id="s1" name="Depends On TestCase Execution" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\Depends_On_TestCase_Execution.robot">
+<test id="s1-t1" name="DeleteUser">
+<kw name="Depends On Test" library="DependencyLibrary">
+<arg>VerifyUser</arg>
+<msg timestamp="20220712 14:36:08.611" level="FAIL">Dependency not met: test case 'VerifyUser' not found.</msg>
+<status status="FAIL" starttime="20220712 14:36:08.606" endtime="20220712 14:36:08.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//a[normalize-space()='${empname}']//parent::td/../td/input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.615" endtime="20220712 14:36:08.616"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.617" endtime="20220712 14:36:08.618"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=btnDelete</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.619" endtime="20220712 14:36:08.619"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.622" endtime="20220712 14:36:08.623"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=dialogDeleteBtn</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.623" endtime="20220712 14:36:08.624"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20220712 14:36:08.625" endtime="20220712 14:36:08.626"/>
+</kw>
+<status status="FAIL" starttime="20220712 14:36:08.603" endtime="20220712 14:36:08.627">Dependency not met: test case 'VerifyUser' not found.</status>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20220712 14:36:06.653" endtime="20220712 14:36:08.630"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Depends On TestCase Execution">Depends On TestCase Execution</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

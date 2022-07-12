@@ -1,0 +1,9 @@
+==============================================================================
+WebOrder Add Order DeleteOrder :: Suite description                           
+==============================================================================
+TC_001-Launch WebOrder and login to application                       | PASS |
+------------------------------------------------------------------------------
+WebOrder Add Order DeleteOrder :: Suite description                   | PASS |
+1 test, 1 passed, 0 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results1\pabot_results\0\output.xml

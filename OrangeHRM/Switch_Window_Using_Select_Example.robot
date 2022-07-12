@@ -13,12 +13,12 @@ OrangeHRM_Logo_Click
     Sleep    2s
 Switch to Window
 
-    Select Window    title=OrangeHRM HR Software | Free HR Software | HRMS | HRIS
+    switch window    title=OrangeHRM HR Software | Free HR Software | HRMS | HRIS
     Sleep   2s
     Click Button      Get a Free Demo
     Sleep   2s
     Element Text Should Be      xpath=//label[normalize-space()='First Name']       First Name
-    Select Window    title=OrangeHRM
+    switch window    title=OrangeHRM
     Sleep   5s
     Click Link      Admin
     Sleep   5s

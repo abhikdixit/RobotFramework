@@ -3,14 +3,14 @@ Documentation    Suite description
 Library     SeleniumLibrary
 
 *** Test Cases ***
-Launch OrangeHRM Login Page
+Launch WebOrder Login Page
     [Tags]    Smoke
-    Open Browser    https://opensource-demo.orangehrmlive.com/index.php     chrome
+    Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    Chrome
     Maximize Browser Window
-    Input Text	name=txtUsername	Admin
-    Input Text	name=txtPassword	admin123
-    Click Button    xpath=//input[@id='btnLogin']
-    Sleep   5s
-    #Set Selenium Implicit wait  20s
-    Element Text Should Be	link=Dashboard	Dashboard
+    Set Selenium Implicit wait  20s
+    Input Text    id=ctl00_MainContent_username    Tester
+    Input Text    id=ctl00_MainContent_password    test
+    Click Button  id=ctl00_MainContent_login_button
+
+    Page Should Contain Button    id=ctl00_MainContent_btnDelete
     Close Browser

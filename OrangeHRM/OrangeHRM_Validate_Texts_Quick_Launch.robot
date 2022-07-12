@@ -16,6 +16,8 @@ TS_001
     Input Password  id:txtPassword  admin123
     Click Element  id:btnLogin
     Element Should Be Visible  id:welcome  timeout=5
+
+
     @{elementList}=  Get WebElements  css:div.quickLaunge
     @{textList}=    Create List
     FOR  ${element}  IN  @{elementList}
@@ -24,7 +26,7 @@ TS_001
     END
     Log To Console  \n List from WebPage:
     Log To Console  ${textList}
-    Log To Console  Our List:
+    Log To Console  Expected List:
     Log To Console  ${quickLaunchList}
     Lists Should Be Equal  ${textList}  ${quickLaunchList}
     Close Browser
