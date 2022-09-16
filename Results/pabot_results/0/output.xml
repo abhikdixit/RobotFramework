@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220914 09:48:24.292" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CreateOrder Unique name WebOrder" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_Unique_name_WebOrder.robot">
+<test id="s1-s1-t1" name="Test1">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx</arg>
+<arg>firefox</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220914 09:48:24.940" level="INFO">Opening browser 'firefox' to base url 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx'.</msg>
+<msg timestamp="20220914 09:48:24.943" level="INFO">Firefox driver log is always forced to to: C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\0\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220914 09:48:24.940" endtime="20220914 09:48:51.399"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220914 09:48:51.400" endtime="20220914 09:48:51.689"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_username</arg>
+<arg>Tester</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:51.693" level="INFO">Typing text 'Tester' into text field 'id=ctl00_MainContent_username'.</msg>
+<status status="PASS" starttime="20220914 09:48:51.689" endtime="20220914 09:48:51.802"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_password</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:51.805" level="INFO">Typing text 'test' into text field 'id=ctl00_MainContent_password'.</msg>
+<status status="PASS" starttime="20220914 09:48:51.803" endtime="20220914 09:48:51.845"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:51.847" level="INFO">Clicking button 'id=ctl00_MainContent_login_button'.</msg>
+<status status="PASS" starttime="20220914 09:48:51.845" endtime="20220914 09:48:54.109"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220914 09:48:56.115" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220914 09:48:54.110" endtime="20220914 09:48:56.116"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>link=View all orders</arg>
+<arg>View all orders</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220914 09:48:56.118" level="INFO">Verifying element 'link=View all orders' contains exact text 'View all orders'.</msg>
+<status status="PASS" starttime="20220914 09:48:56.116" endtime="20220914 09:48:56.180"/>
+</kw>
+<doc>login to Web page</doc>
+<status status="PASS" starttime="20220914 09:48:24.938" endtime="20220914 09:48:56.181"/>
+</test>
+<test id="s1-s1-t2" name="Test2">
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Order</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:56.185" level="INFO">Clicking link 'link=Order'.</msg>
+<status status="PASS" starttime="20220914 09:48:56.184" endtime="20220914 09:48:56.846"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>ctl00$MainContent$fmwOrder$cardList</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220914 09:48:56.846" endtime="20220914 09:48:56.878"/>
+</kw>
+<kw name="Select From List By Index" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_ddlProduct</arg>
+<arg>1</arg>
+<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
+<msg timestamp="20220914 09:48:56.879" level="INFO">Selecting options from selection list 'id=ctl00_MainContent_fmwOrder_ddlProduct' by index 1.</msg>
+<status status="PASS" starttime="20220914 09:48:56.878" endtime="20220914 09:48:57.155"/>
+</kw>
+<kw name="List Selection Should Be" library="SeleniumLibrary">
+<arg>id:ctl00_MainContent_fmwOrder_ddlProduct</arg>
+<arg>FamilyAlbum</arg>
+<doc>Verifies selection list ``locator`` has ``expected`` options selected.</doc>
+<msg timestamp="20220914 09:48:57.156" level="INFO">Verifying list 'id:ctl00_MainContent_fmwOrder_ddlProduct' has option [ FamilyAlbum ] selected.</msg>
+<msg timestamp="20220914 09:48:57.164" level="INFO">Current page contains list 'id:ctl00_MainContent_fmwOrder_ddlProduct'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.155" endtime="20220914 09:48:57.216"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtQuantity</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.217" level="INFO">Typing text '1' into text field 'id=ctl00_MainContent_fmwOrder_txtQuantity'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.216" endtime="20220914 09:48:57.239"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtDiscount</arg>
+<arg>20</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.240" level="INFO">Typing text '20' into text field 'id=ctl00_MainContent_fmwOrder_txtDiscount'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.239" endtime="20220914 09:48:57.260"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_num}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220914 09:48:57.261" level="INFO">${random_num} = GVsSB9AP</msg>
+<status status="PASS" starttime="20220914 09:48:57.260" endtime="20220914 09:48:57.261"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${empname}</var>
+<arg>dixit${random_num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220914 09:48:57.262" level="INFO">${empname} = dixitGVsSB9AP</msg>
+<status status="PASS" starttime="20220914 09:48:57.261" endtime="20220914 09:48:57.262"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${empname}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20220914 09:48:57.262" endtime="20220914 09:48:57.263"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$txtName</arg>
+<arg>${empname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.263" level="INFO">Typing text 'dixitGVsSB9AP' into text field 'name=ctl00$MainContent$fmwOrder$txtName'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.263" endtime="20220914 09:48:57.284"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox2</arg>
+<arg>teststreet</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.286" level="INFO">Typing text 'teststreet' into text field 'name=ctl00$MainContent$fmwOrder$TextBox2'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.285" endtime="20220914 09:48:57.303"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox3</arg>
+<arg>Delhi</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.306" level="INFO">Typing text 'Delhi' into text field 'name=ctl00$MainContent$fmwOrder$TextBox3'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.303" endtime="20220914 09:48:57.324"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox4</arg>
+<arg>teststate</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.325" level="INFO">Typing text 'teststate' into text field 'name=ctl00$MainContent$fmwOrder$TextBox4'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.325" endtime="20220914 09:48:57.343"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox5</arg>
+<arg>1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:57.344" level="INFO">Typing text '1234' into text field 'name=ctl00$MainContent$fmwOrder$TextBox5'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.343" endtime="20220914 09:48:57.363"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>ctl00$MainContent$fmwOrder$cardList</arg>
+<arg>Visa</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<msg timestamp="20220914 09:48:57.365" level="INFO">Selecting 'Visa' from radio button 'ctl00$MainContent$fmwOrder$cardList'.</msg>
+<status status="PASS" starttime="20220914 09:48:57.364" endtime="20220914 09:48:58.055"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox6</arg>
+<arg>1245678988</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:58.056" level="INFO">Typing text '1245678988' into text field 'name=ctl00$MainContent$fmwOrder$TextBox6'.</msg>
+<status status="PASS" starttime="20220914 09:48:58.055" endtime="20220914 09:48:58.077"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$fmwOrder$TextBox1</arg>
+<arg>10/24</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:58.077" level="INFO">Typing text '10/24' into text field 'name=ctl00$MainContent$fmwOrder$TextBox1'.</msg>
+<status status="PASS" starttime="20220914 09:48:58.077" endtime="20220914 09:48:58.093"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link=Process</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:58.093" level="INFO">Clicking link 'link=Process'.</msg>
+<status status="PASS" starttime="20220914 09:48:58.093" endtime="20220914 09:48:58.727"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>New order has been successfully added.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220914 09:48:58.745" level="INFO">Current page contains text 'New order has been successfully added.'.</msg>
+<status status="PASS" starttime="20220914 09:48:58.727" endtime="20220914 09:48:58.745"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>View all orders</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:58.746" level="INFO">Clicking link 'View all orders'.</msg>
+<status status="PASS" starttime="20220914 09:48:58.745" endtime="20220914 09:48:59.394"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220914 09:49:01.407" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220914 09:48:59.394" endtime="20220914 09:49:01.407"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[text()='${empname}']</arg>
+<arg>${empname}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220914 09:49:01.409" level="INFO">Verifying element '//td[text()='dixitGVsSB9AP']' contains exact text 'dixitGVsSB9AP'.</msg>
+<status status="PASS" starttime="20220914 09:49:01.408" endtime="20220914 09:49:01.428"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>//td[text()='${empname}']//following-sibling::td[text()='Delhi']</arg>
+<arg>Delhi</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220914 09:49:01.429" level="INFO">Verifying element '//td[text()='dixitGVsSB9AP']//following-sibling::td[text()='Delhi']' contains exact text 'Delhi'.</msg>
+<status status="PASS" starttime="20220914 09:49:01.429" endtime="20220914 09:49:01.442"/>
+</kw>
+<doc>Create Order and Verify that unique user have been added</doc>
+<status status="PASS" starttime="20220914 09:48:56.182" endtime="20220914 09:49:01.442"/>
+</test>
+<test id="s1-s1-t3" name="Test4">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Logout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220914 09:49:01.444" level="INFO">Clicking element 'link=Logout'.</msg>
+<status status="PASS" starttime="20220914 09:49:01.443" endtime="20220914 09:49:02.663"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220914 09:49:03.670" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20220914 09:49:02.663" endtime="20220914 09:49:03.671"/>
+</kw>
+<kw name="Page Should Contain" library="SeleniumLibrary">
+<arg>Login</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<msg timestamp="20220914 09:49:03.682" level="INFO">Current page contains text 'Login'.</msg>
+<status status="PASS" starttime="20220914 09:49:03.671" endtime="20220914 09:49:03.682"/>
+</kw>
+<doc>Logout from WebOrder</doc>
+<status status="PASS" starttime="20220914 09:49:01.443" endtime="20220914 09:49:03.683"/>
+</test>
+<test id="s1-s1-t4" name="Test5">
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20220914 09:49:03.684" endtime="20220914 09:49:04.877"/>
+</kw>
+<doc>Close the Browser</doc>
+<status status="PASS" starttime="20220914 09:49:03.683" endtime="20220914 09:49:04.878"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20220914 09:48:24.372" endtime="20220914 09:49:04.879"/>
+</suite>
+<status status="PASS" starttime="20220914 09:48:24.317" endtime="20220914 09:49:04.883"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="CreateOrder Unique name WebOrder">Suites.CreateOrder Unique name WebOrder</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

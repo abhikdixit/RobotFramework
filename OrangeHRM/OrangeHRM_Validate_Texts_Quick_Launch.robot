@@ -18,7 +18,8 @@ TS_001
     Element Should Be Visible  id:welcome  timeout=5
 
 
-    @{elementList}=  Get WebElements  css:div.quickLaunge
+    @{elementList}=  Get WebElements    xpath=//div[@class='quickLaunge']
+    #css:div.quickLaunge
     @{textList}=    Create List
     FOR  ${element}  IN  @{elementList}
          ${text}=  Get Text  ${element}
@@ -28,5 +29,8 @@ TS_001
     Log To Console  ${textList}
     Log To Console  Expected List:
     Log To Console  ${quickLaunchList}
+    #Below will check the count matching or not
     Lists Should Be Equal  ${textList}  ${quickLaunchList}
+    #Below will check the string or value matching or not between List 1 and List 2
+    List Should Contain Sub List    ${textList}  ${quickLaunchList}
     Close Browser

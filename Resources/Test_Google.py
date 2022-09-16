@@ -3,6 +3,7 @@ import time
 from robot.api.deco import keyword
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.support.wait import WebDriverWait
 from webdriver_manager.chrome import ChromeDriverManager
 
 
@@ -40,4 +41,16 @@ def test_open_google_url():
     time.sleep(5)
     assert title == driver.title
     time.sleep(2)
+    driver.quit()
+
+
+@keyword("Weborder Login")
+def test_weborder_login():
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    driver.get("http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx")
+    driver.find_element_by_id("ctl00_MainContent_username").send_keys('Tester')
+    driver.find_element_by_id("ctl00_MainContent_password").send_keys('test')
+    driver.find_element_by_id("ctl00_MainContent_login_button").click()
+    wait = WebDriverWait(driver, 20)
+    driver.find_element_by_id('ctl00_MainContent_btnDelete').is_displayed()
     driver.quit()

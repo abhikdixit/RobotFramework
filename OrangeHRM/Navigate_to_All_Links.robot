@@ -3,9 +3,11 @@ Documentation    Suite description
 Library     SeleniumLibrary
 Library     Collections
 Library     OperatingSystem
+
+
 *** Test Cases ***
 Navigate to All links of google
-    Open Browser    https://opensource-demo.orangehrmlive.com/index.php/auth/login  chrome
+    Open Browser    https://opensource-demo.orangehrmlive.com/web/index.php/auth/login  ff
     Sleep   2s
     @{element_list}=        Get WebElements     xpath=//a
     #Create Empty List String to store all href

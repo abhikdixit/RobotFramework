@@ -1,11 +1,11 @@
 ==============================================================================
 OrangeHRM                                                                     
 ==============================================================================
-OrangeHRM.WebOrder Add Order DeleteOrder :: Suite description                 
+OrangeHRM.OrangeHRM Logo Click :: Suite description                           
 ==============================================================================
-TC_001-Launch WebOrder and login to application                       | PASS |
+OrangeHRM_Logo_Click                                                  | PASS |
 ------------------------------------------------------------------------------
-OrangeHRM.WebOrder Add Order DeleteOrder :: Suite description         | PASS |
+OrangeHRM.OrangeHRM Logo Click :: Suite description                   | PASS |
 1 task, 1 passed, 0 failed
 ==============================================================================
 OrangeHRM                                                             | PASS |

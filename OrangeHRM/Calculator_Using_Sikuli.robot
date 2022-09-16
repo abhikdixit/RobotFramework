@@ -8,7 +8,11 @@ Calc_UsingSikuli
     Win Wait Active     Calculator
     Sleep       2s
     SikuliLibrary.Click     D://Robot Framework//SikuliObjects//7.PNG
+    Sleep       2s
     SikuliLibrary.Click     D://Robot Framework//SikuliObjects//Plus.PNG
+    Sleep       2s
     SikuliLibrary.Click     D://Robot Framework//SikuliObjects//7.PNG
+    Sleep       2s
     SikuliLibrary.Click     D://Robot Framework/SikuliObjects//Equall.PNG
+    Sleep       2s
     Close Application       Calculator

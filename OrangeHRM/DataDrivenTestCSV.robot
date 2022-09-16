@@ -19,6 +19,6 @@ Invalid Login Scenarios
     Click Button    ${btn_login}
     Sleep  2s
     #Verify that, If user has logged in them Dashboard , if not then Login page
-    ${count}=  Get Element Count  id=spanMessage  # Checking whether user on Login page or not
+    ${count}=  Get Element Count  xpath=//p[@class='oxd-text oxd-text--p oxd-alert-content-text']  # Checking whether user on Login page or not
     Run Keyword If  ${count} > 0  Element Should Contain      ${txt_error}    ${error_msg}  # If the element is not present we will get the value of count as 0
     ...  ELSE  Element Should Contain      ${lnk_dashboard}    ${error_msg}

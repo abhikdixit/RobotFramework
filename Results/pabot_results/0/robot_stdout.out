@@ -1,0 +1,21 @@
+==============================================================================
+Suites                                                                        
+==============================================================================
+Suites.CreateOrder Unique name WebOrder :: Suite description                  
+==============================================================================
+Test1 :: login to Web page                                            | PASS |
+------------------------------------------------------------------------------
+Test2 :: Create Order and Verify that unique user have been added     dixitGVsSB9AP
+| PASS |
+------------------------------------------------------------------------------
+Test4 :: Logout from WebOrder                                         | PASS |
+------------------------------------------------------------------------------
+Test5 :: Close the Browser                                            | PASS |
+------------------------------------------------------------------------------
+Suites.CreateOrder Unique name WebOrder :: Suite description          | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Suites                                                                | PASS |
+4 tests, 4 passed, 0 failed
+==============================================================================
+Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\0\output.xml

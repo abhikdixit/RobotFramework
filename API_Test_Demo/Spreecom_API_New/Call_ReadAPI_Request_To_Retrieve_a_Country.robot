@@ -5,14 +5,14 @@ Library     ../Resources/Read_API_Request.py
 #Need to use Collections Library if you are using List of dictionary objectx
 Library     Collections
 *** Variables ***
-${base_url}     https://demo.spreecommerce.org/api/v2/storefront/countries
+${base_url}     https://demo.spreecommerce.org/api/v2/storefront/countries/
 ${iso}       ind
 
 *** Test Cases ***
 Retrieve a Country
     #create session      mysession   ${base_url}
     #${response}=    test_get_id_details
-    ${response}=       Get Countries        ${iso}
+    ${response}=      Get Countries
     log to console      ${response.status_code}
     log to console      ${response.content}
     log to console      ${response.headers}

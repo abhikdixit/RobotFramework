@@ -1,11 +1,11 @@
 ==============================================================================
 OrangeHRM                                                                     
 ==============================================================================
-OrangeHRM.OrangeHRM Logo Click :: Suite description                           
+OrangeHRM.Call WebOrder Panda :: Suite description                            
 ==============================================================================
-OrangeHRM_Logo_Click                                                  | PASS |
+TC_001-Launch WebOrder and login to application                       | PASS |
 ------------------------------------------------------------------------------
-OrangeHRM.OrangeHRM Logo Click :: Suite description                   | PASS |
+OrangeHRM.Call WebOrder Panda :: Suite description                    | PASS |
 1 task, 1 passed, 0 failed
 ==============================================================================
 OrangeHRM                                                             | PASS |

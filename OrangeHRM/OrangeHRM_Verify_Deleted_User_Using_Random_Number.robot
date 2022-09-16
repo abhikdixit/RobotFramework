@@ -34,6 +34,7 @@ Add Users Details->Verify User->Delete User->Verify User got Deleted
     Sleep   5s
     Page Should Contain Link        link=${empname}
     Sleep   2s
+#Delete User -> Verify User got deleted
     Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
     Sleep   5s
     click button    id=btnDelete

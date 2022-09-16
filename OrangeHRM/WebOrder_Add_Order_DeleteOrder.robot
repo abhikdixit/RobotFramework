@@ -5,7 +5,7 @@ Library     String
 
 *** Test Cases ***
 TC_001-Launch WebOrder and login to application
-    [Tags]      Test
+    [tags]      Test
     Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    Chrome
     Maximize Browser Window
     Input Text    id=ctl00_MainContent_username    Tester
@@ -29,9 +29,6 @@ Click on Order and Enter the Details
 Go to View All Orders and Verify that user got added
     Click Link      link=View all orders
     Sleep       2s
-    Click Element       xpath=//td[normalize-space()='Dixit']//preceding-sibling::td/input
-    #Click Element       xpath=//a[normalize-space()='${empname}']//parent::td/../td/input
-    Sleep   5s
     Click Element       xpath=//td[normalize-space()='Dixit']//following-sibling::td/input
     Sleep   2s
     Page Should Contain     Edit Order

@@ -11,4 +11,5 @@ Search for Product
     Click Button	xpath=//input[@value='Go']
     Sleep	5s
     Page Should Contain	results for "${search_text}"
+Close browser at end
     Close Browser

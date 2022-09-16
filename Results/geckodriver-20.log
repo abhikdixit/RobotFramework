@@ -1,0 +1,14 @@
+1662697778289	geckodriver	INFO	Listening on 127.0.0.1:51772
+1662697781355	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilebSOUyg"
+1662697782439	Marionette	INFO	Marionette enabled
+1662697782457	Marionette	INFO	Listening on port 51786
+1662697783097	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilebSOUyg\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+1662697789596	Marionette	INFO	Stopped listening on port 51786

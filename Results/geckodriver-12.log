@@ -1,0 +1,8 @@
+1657708669787	geckodriver	INFO	Listening on 127.0.0.1:64492
+1657708672832	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilewvj3UK"
+1657708673840	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilewvj3UK\\search.json.mozlz4", (void 0)))
+1657708678106	Marionette	INFO	Listening on port 64502
+1657708678220	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+1657708687369	Marionette	INFO	Stopped listening on port 64502
+JavaScript error: chrome://remote/content/marionette/cert.js, line 55: NS_ERROR_NOT_AVAILABLE: Component returned failure code: 0x80040111 (NS_ERROR_NOT_AVAILABLE) [nsICertOverrideService.setDisableAllSecurityChecksAndLetAttackersInterceptMyData]

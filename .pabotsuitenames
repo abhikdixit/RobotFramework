@@ -1,6 +1,7 @@
-datasources:9380eb19a26d8a4e6c0b4b4d02dfff82e2a44813
-commandlineoptions:5b0817d119d1fe6038c990c56ba864abb6721b1e
+datasources:b004dbe861c9fa8c46565f1ab6574442199113f5
+commandlineoptions:9f8598a690c7367accf83ead504756ddd374acc9
 suitesfrom:no-suites-from-option
-file:c82ef8e76af908b6d1adce38193cd2106ad31ffa
---suite OrangeHRM.OrangeHRM Logo Click
---suite OrangeHRM.WebOrder Add Order DeleteOrder
+file:d216aa7a380f7a5f7ee088a7a7e945d9d28bae2b
+--suite Suites.CreateOrder Unique name WebOrder
+--suite Suites.CreateOrder UpdateOrder DeleteOrder
+--suite Suites.CreateOrder WebOrder

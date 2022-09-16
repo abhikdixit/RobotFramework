@@ -1,0 +1,25 @@
+1662706328178	geckodriver	INFO	Listening on 127.0.0.1:50101
+1662706331251	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofile8nv3pd"
+1662706332337	Marionette	INFO	Marionette enabled
+1662706332351	Marionette	INFO	Listening on port 50109
+1662706332987	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofile8nv3pd\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "http://secure.smartbearsoftware.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1662706346093	Marionette	INFO	Stopped listening on port 50109

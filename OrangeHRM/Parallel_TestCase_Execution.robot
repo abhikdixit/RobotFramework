@@ -5,16 +5,18 @@ Library     SeleniumLibrary
 *** Test Cases ***
 Launch OrangeHRM Login Page
     [Tags]    Smoke
-    Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
+    Open Browser	https://opensource-demo.orangehrmlive.com/web/index.php/auth/login	chrome
     Maximize Browser Window
-    Input Text	xpath=//input[@id='txtUsername']	Admin
-    Input Text	name=txtPassword	admin123
+    Sleep	2s
+    Input Text	    name=username	    Admin
+    Sleep	2s
+    Input Text	    name=password	    admin123
+    Sleep	2s
     #Click Button	xpath=//input[@id='btnLogin']
-    Click Button	css=input[id='btnLogin']
-    #Element Text Should Be	link=Dashboard	Dashboard
-    Page Should Contain Link        Dashboard   timeout=5
-    #Verify that user is on Dashboard page
-    Element Text Should Be	link=Dashboard	Dashboard
+    Click Button	css=button[type='submit']
+    Sleep	2s
+    element text should be  xpath=//span[normalize-space()='Dashboard']     Dashboard
+    Sleep	2s
     close browser
 TC_001-Launch WebOrder and login to application
     Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    Chrome

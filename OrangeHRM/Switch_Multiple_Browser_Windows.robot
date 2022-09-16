@@ -22,12 +22,13 @@ Switch between Browser windows using 'Get Window Handles' and verify the text
     [documentation]  This test case verifies that the user is able to switch between browser
     ...  windows using window handles and verify the text.
     [tags]  Smoke
-    Open Browser  https://the-internet.herokuapp.com/windows  chrome
-    Wait Until Element Is Visible  tag:h3  timeout=5
+    Open Browser  https://the-internet.herokuapp.com/windows  ff
+    Sleep       5s
+    Wait Until Element Is Visible   tag:h3
     Click Element  css:[href="/windows/new"]
-    ${handles}=  Get Window Handles
-    switch window       ${handles}[0]
+    @{handles}=  Get Window Handles
+    switch browser       ${handles}[0]
     Element Text Should Be  tag:h3  Opening a new window  timeout=5
-    switch window       ${handles}[1]
+    switch browser       ${handles}[1]
     Element Text Should Be  tag:h3  New Window  timeout=5
     Close Browser

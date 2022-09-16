@@ -1,6 +1,5 @@
-https://opensource-demo.orangehrmlive.com/index.php/auth/requestPasswordResetCode
+https://www.linkedin.com/company/orangehrm/mycompany/
+https://www.facebook.com/OrangeHRM/
+https://twitter.com/orangehrm?lang=en
+https://www.youtube.com/c/OrangeHRMInc
 http://www.orangehrm.com/
-http://www.linkedin.com/groups?home=&gid=891077
-http://www.facebook.com/OrangeHRM
-http://twitter.com/orangehrm
-http://www.youtube.com/orangehrm

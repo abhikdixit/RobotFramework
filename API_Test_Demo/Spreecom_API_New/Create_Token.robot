@@ -10,6 +10,7 @@ ${base_url}     https://demo.spreecommerce.org
 *** Test Cases ***
 Create or Refresh Token
     create session      mysession   ${base_url}
+    #"Content-Type":"application/json"
     ${header}=       create dictionary       Content-Type=application/json
     ${req_body}=    get file    API_Test_Demo/Spreecom_API_New/TestData/CreateToken.json
     log to console      ${req_body}
@@ -30,5 +31,6 @@ Create or Refresh Token
     ${access_token}=      get value from json  ${response.json()}        $.access_token
     #extract the contents of the string out of the query results , to remove unicode
     # Need to use [0]
+    Log to console      ${access_token}
     ${access_token_final}=      Set Variable    ${access_token[0]}
     Log to console      ${access_token_final}

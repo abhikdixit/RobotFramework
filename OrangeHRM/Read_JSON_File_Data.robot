@@ -12,10 +12,12 @@ Example of how to load JSON
     ${object}=  Evaluate    json.loads('''${json}''')   json
     Log to console      ${object}
 # Read the data from JSON and pass to application
-    Open Browser    ${object["url"]}  chrome
+    Open Browser    ${object["url"]}  ff
     Maximize Browser Window
-    Input Text	name=txtUsername	${object["uname"]}
-    Input Text	name=txtPassword	${object["pass"]}
-    Click Button    xpath=//input[@id='btnLogin']
-    Comment     Element Text Should Be	link=Dashboard	Dashboard
+    Input Text    id=ctl00_MainContent_username    ${object["uname"]}
+    Input Text    id=ctl00_MainContent_password    ${object["pass"]}
+    Click Button  id=ctl00_MainContent_login_button
+    Sleep   5s
+    Page Should Contain Button    id=ctl00_MainContent_btnDelete
+
     Close Browser

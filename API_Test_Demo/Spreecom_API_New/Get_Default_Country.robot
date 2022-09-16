@@ -10,7 +10,7 @@ ${base_url}     https://demo.spreecommerce.org
 Get Default Country
     create session      mysession   ${base_url}
     ${response}=    GET On Session     mysession      /api/v2/storefront/countries/default
-    log to console      ${response.status_code}
+    log to console  My status code is=${response.status_code}
     log to console      ${response.content}
     log to console      ${response.headers}
 
@@ -21,3 +21,12 @@ Get Default Country
 
     ${body}=        convert to string       ${response.content}
     should contain  ${body}     UNITED STATES
+
+    #Check iso_name from Response Body
+        ${iso_name}=      get value from json  ${response.json()}        $.data.attributes.iso_name
+        #extract the contents of the string out of the query results , to remove unicode
+        # Need to use [0]
+        Log to console      Actual ISO_Name=${iso_name}
+        Log to console      After Removing Unicode=ISO_Name=${iso_name[0]}
+        Should be equal  ${iso_name[0]}  UNITED STATES
+

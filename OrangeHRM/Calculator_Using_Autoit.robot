@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Suite description
 Library           AutoItLibrary
-Library           SikuliLibrary
+#Library           SikuliLibrary
 *** Test Cases ***
 LaunchCalc
     Run    calc.exe

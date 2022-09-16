@@ -7,11 +7,11 @@ Variables  ../TestData/Testdata.py
 Verify Welcome Text is Visible
     Element Should Be Visible  ${WelcomeText}  timeout=5
 
-Logout
+LogoutFromApp
     CLick Element  ${WelcomeText}
     Wait Until Element Is Visible  ${LogoutButton}  timeout=5
     Click Element  ${LogoutButton}
     Wait Until Element Is Visible  ${LoginUsernameInputBox}  timeout=5
-Admin
+GoToAdmin
 
 PIM

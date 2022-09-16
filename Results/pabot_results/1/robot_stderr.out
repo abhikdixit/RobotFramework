@@ -1,0 +1,8 @@
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Browsing context has been discarded
+
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+
+[ WARN ] Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+

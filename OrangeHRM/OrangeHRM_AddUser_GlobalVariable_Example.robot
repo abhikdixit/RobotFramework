@@ -6,6 +6,7 @@ Library     String
 *** Test Cases ***
 
 Launch OrangeHRM and login to application
+    [tags]      E2ETest
     Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
     Maximize Browser Window
     Input Text	xpath=//input[@id='txtUsername']	Admin

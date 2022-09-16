@@ -3,13 +3,22 @@ Documentation    Suite description
 Library     SeleniumLibrary
 
 *** Variables ***
-${url}      https://opensource-demo.orangehrmlive.com/index.php/auth/login
-${browser}      chrome
+${time}
+${url}      https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${url_web}  http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx
+${browser}      ff
 #Below variables are related to  OrangeHRM Login page application object identification
-${txtbox_username}     name=txtUsername
-${txtbox_password}     name=txtPassword
-${btn_login}        id=btnLogin
-${txt_error}        id=spanMessage
-${lnk_dashboard}    link=Dashboard
-${lnk_welcome}      id=welcome
+${txtbox_username}     name=username
+${txtbox_password}     name=password
+${btn_login}        css=button[type='submit']
+${txt_error}        xpath=//p[@class='oxd-text oxd-text--p oxd-alert-content-text']
+${lnk_dashboard}    xpath=//span[normalize-space()='Dashboard']
+${lnk_welcome}      xpath=//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']
 ${lnk_logout}       link=Logout
+
+#Below variables are related to  WebOrder Login page application object identification
+${txtbox_username_web}     id=ctl00_MainContent_username
+${txtbox_password_web}     id=ctl00_MainContent_password
+${btn_login_web}        id=ctl00_MainContent_login_button
+${lnk_logout_web}           link=Logout
+${txt_error_web}        id=ctl00_MainContent_status

@@ -7,8 +7,8 @@ Launch OrangeHRM and login to application
     [Tags]    Regression
     Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
     Maximize Browser Window
-    Input Text	xpath=//input[@id='txtUsername']	Admin
-    Input Text	name=txtPassword	admin123
+    Input Text	xpath=//input[@name='username']	Admin
+    Input Text	xpath=//input[@name='password']	admin123
     #Click Button	xpath=//input[@id='btnLogin']
     Click Button	css=input[id='btnLogin']
     #Element Text Should Be	link=Dashboard	Dashboard

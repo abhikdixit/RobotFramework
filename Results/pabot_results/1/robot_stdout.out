@@ -1,16 +1,28 @@
 ==============================================================================
 Suites                                                                        
 ==============================================================================
-Suites.ScrollTo Guru99 Element                                                
+Suites.CreateOrder UpdateOrder DeleteOrder :: Test for Editing and Deleting...
 ==============================================================================
-Scroll                                                                | PASS |
+Login_to_WebOrder :: Test to verify that the user can login to the... | PASS |
 ------------------------------------------------------------------------------
-Suites.ScrollTo Guru99 Element                                        | PASS |
-1 critical test, 1 passed, 0 failed
-1 test total, 1 passed, 0 failed
+Create_new_order :: Test to verify that the user can create a new ... | FAIL |
+NoSuchWindowException: Message: Browsing context has been discarded
+------------------------------------------------------------------------------
+Update_the_order_Verify_the_order                                     | FAIL |
+WebDriverException: Message: Failed to decode response from marionette
+------------------------------------------------------------------------------
+Deleting the user and verify that user got deleted                    | FAIL |
+InvalidSessionIdException: Message: Tried to run command without establishing a connection
+------------------------------------------------------------------------------
+Logout_WebOrder :: Test whether the user has logged out of Web Order  | FAIL |
+InvalidSessionIdException: Message: Tried to run command without establishing a connection
+------------------------------------------------------------------------------
+Close_browser                                                         | PASS |
+------------------------------------------------------------------------------
+Suites.CreateOrder UpdateOrder DeleteOrder :: Test for Editing and... | FAIL |
+6 tests, 2 passed, 4 failed
 ==============================================================================
-Suites                                                                | PASS |
-1 critical test, 1 passed, 0 failed
-1 test total, 1 passed, 0 failed
+Suites                                                                | FAIL |
+6 tests, 2 passed, 4 failed
 ==============================================================================
 Output:  C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\1\output.xml

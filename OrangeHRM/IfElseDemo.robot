@@ -5,7 +5,7 @@ Library     SeleniumLibrary
 *** Test Cases ***
 Launch OrangeHRM Login Page
     [Tags]    Smoke
-    Open Browser    https://www.saucedemo.com/  chrome
+    Open Browser    https://www.saucedemo.com/      ff
     Maximize Browser Window
     Input Text	id=user-name	standard_user
     Input Text	id=password	    secret_sauce
@@ -14,10 +14,11 @@ Launch OrangeHRM Login Page
     #Log to Console  Total number of Items=${items_on_page}
     #Will display the message in Result Report of Robot Framework
     Log  Total number of Items=${items_on_page}
-    RUN Keyword If  ${items_on_page} == 6  Test Keyword 1  ELSE IF  ${items_on_page} < 10 and ${items_on_page} > 6  Test Keyword 2  ELSE  Test Keyword 3
+    RUN Keyword If  ${items_on_page} == 5  Test Keyword 1  ELSE IF  ${items_on_page} < 10 and ${items_on_page} > 5  Test Keyword 2  ELSE  Test Keyword 3
 
 *** Keywords ***
 Test Keyword 1
+    Sleep       5s
     Log To Console      Executed Keyword1 - Found Items as expected
     Close Browser
 

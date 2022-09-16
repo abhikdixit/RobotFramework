@@ -6,54 +6,39 @@ Library     DependencyLibrary
 
 *** Test Cases ***
 
-Login_To_OrangeHRM
-    Open Browser	https://opensource-demo.orangehrmlive.com/	chrome
-    Maximize Browser Window
-    Input Text	xpath=//input[@id='txtUsername']	Admin
-    Input Text	name=txtPassword	admin123
-    #Click Button	xpath=//input[@id='btnLogin']
-    Click Button	css=input[id='btnLogin']
-    #Element Text Should Be	link=Dashboard	Dashboard
-    Page Should Contain Link        Dashboard   timeout=5
+Login_To_WebOrder
+   [documentation]  login to Web page
+    Open Browser    http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx     ff
+    maximize browser window
+            Input Text   id=ctl00_MainContent_username  Tester
+            Input Text   id=ctl00_MainContent_password  test
+            Click Button    id=ctl00_MainContent_login_button
+            Sleep   2s
+            Element Text Should Be   link=View all orders   View all orders
 
-AddButton
-    Depends on test     Login_To_OrangeHRM
-    #Mouse Over  link=Admin
-    Mouse Over	link=Admin
-    Sleep	2s
-    Mouse Over	link=User Management
-    Click Link	link=Users
-    Click Button	name=btnAdd
-AddUser
-    Depends on test     AddButton
-    ${random_num} =     Generate Random String
-    ${empname}=     Catenate    SEPARATOR=    Abhi    ${random_num}
-    Log to Console      ${empname}
-    # Set variable as Global, so that user can access in other test cases under Suite
-    Set Global Variable   ${empname}
-    Select From List By Label    id=systemUser_userType    Admin
-    Input Text  id=systemUser_employeeName_empName  Fiona Grace
-    Input Text  id=systemUser_userName  ${empname}
-    Select From List By Value   id=systemUser_status    1
-    Input Text  id=systemUser_password  admin123
-    Input Text  id=systemUser_confirmPassword  admin123
-    Click Button    id=btnSave
-    Sleep   5s
-VerifyUser
-    Depends on test     AddUser
-    Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
-    #Click Element       xpath=//a[text()='${empname}']//parent::td/../td/input
-    Sleep   5s
-DeleteUser
-    Depends on test     VerifyUser
-    #//a[normalize-space()='${empname}']//parent::td/../td/input
-    #Verify that added user visible in WebTable and able to select the checkbox
-    #Table Should Contain        xpath=//table[@id='resultTable']        ${empname}
-    Click Element       xpath=//a[normalize-space()='${empname}']//parent::td/../td/input
-    Sleep   5s
-    Click Element       id=btnDelete
-    Sleep   2s
-    Click Element       id=dialogDeleteBtn
-    Sleep   5s
+Create Order
+            depends on test     Login_To_WebOrder
+            Click Link      link=Order
+            Wait Until Element Is Visible       ctl00$MainContent$fmwOrder$cardList       timeout=10
+            Select From List By Index  id=ctl00_MainContent_fmwOrder_ddlProduct  1
+            List Selection Should Be  id:ctl00_MainContent_fmwOrder_ddlProduct  FamilyAlbum
+            input text      id=ctl00_MainContent_fmwOrder_txtQuantity       1
+            input text      id=ctl00_MainContent_fmwOrder_txtDiscount       20
+            input text      name=ctl00$MainContent$fmwOrder$txtName       testord
+            input text      name=ctl00$MainContent$fmwOrder$TextBox2       teststreet
+            input text      name=ctl00$MainContent$fmwOrder$TextBox3      testcity
+            input text      name=ctl00$MainContent$fmwOrder$TextBox4     teststate
+            input text      name=ctl00$MainContent$fmwOrder$TextBox5     1234
+            Select Radio Button     ctl00$MainContent$fmwOrder$cardList        Visa
+            input text      name=ctl00$MainContent$fmwOrder$TextBox6     1245678988
+            input text      name=ctl00$MainContent$fmwOrder$TextBox1     10/24
+            click link      link=Process
+            page should contain     New order has been successfully added.
+Logout from Application
+    Depends on test     Login_To_WebOrder
+    [documentation]  Logout from WebOrder
+        click element        link=Logout
+        Sleep      1s
+        page should contain     Login
 Close Browser at end
     Close Browser

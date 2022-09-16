@@ -8,7 +8,7 @@ Library  SeleniumLibrary
 Verify that the user is able to do a Space Key Press
     [documentation]  This test case verifies that a user is able to press Space Key into the input box
     [tags]  Regression
-    Open Browser  https://the-internet.herokuapp.com/key_presses  Chrome
+    Open Browser  https://the-internet.herokuapp.com/key_presses  ff
     Wait Until Element Is Visible  id:target  timeout=5
     Press Keys  id:target  SPACE
     Element Text Should Be  id:result  You entered: SPACE
@@ -17,7 +17,7 @@ Verify that the user is able to do a Space Key Press
 Verify that user is be able to hover over elements
     [documentation]  This test case verifies that a user is able to hover over elements by moving the cursor
     [tags]  Regression
-    Open Browser  https://the-internet.herokuapp.com/hovers  Chrome
+    Open Browser  https://the-internet.herokuapp.com/hovers  ff
     Wait Until Element Is Visible  id:content  timeout=5
     Mouse Over  css:div:nth-child(3) > img
     Element Text Should Be  css:div:nth-child(3) > div > h5  name: user1  timeout=5
@@ -30,7 +30,7 @@ Verify that user is be able to hover over elements
 Verify that the user can drag and drop elements
     [documentation]  This test case verifies that a user can drag and drop an element from source to destination
     [tags]  Regression
-    Open Browser  https://demoqa.com/droppable  Chrome
+    Open Browser  https://demoqa.com/droppable  ff
     Maximize Browser Window
     Wait Until Element Is Visible  css:div.row  timeout=5
     Element Text Should Be  id:droppable  Drop here  timeout=5  #Before Drag and Drop

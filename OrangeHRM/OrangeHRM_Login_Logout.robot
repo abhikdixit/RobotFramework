@@ -26,3 +26,4 @@ Logout from OrangeHRM
 
 Close browser at end
     Close Browser
+    #close all browsers

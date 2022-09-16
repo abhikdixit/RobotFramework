@@ -4,8 +4,7 @@ Library     SeleniumLibrary
 
 *** Test Cases ***
 Click on JS Alert
-    Open Browser    https://the-internet.herokuapp.com/javascript_alerts    chrome
-
+    Open Browser    https://the-internet.herokuapp.com/javascript_alerts    ff
     Click Element       xpath=//button[normalize-space()='Click for JS Alert']
     Sleep    2s
     Alert Should Be Present     I am a JS Alert     ACCEPT
@@ -25,7 +24,7 @@ Enter the Text in Alert Input Box
     Sleep   2s
     #Alert Should Be Present     I am a JS prompt
     Input Text Into Alert   Robot   ACCEPT
-    Sleep   2s
+    Sleep   5s
     Element Text Should Be	id=result   You entered: Robot
-    #Close Browser
+Close Browser
     close browser

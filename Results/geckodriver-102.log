@@ -1,0 +1,17 @@
+1663308747023	geckodriver	INFO	Listening on 127.0.0.1:64455
+1663308750079	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileI3LImB"
+1663308751100	Marionette	INFO	Marionette enabled
+1663308751119	Marionette	INFO	Listening on port 64463
+1663308751398	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofileI3LImB\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.spreecommerce.org"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://demo.spreecommerce.org"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+1663308768285	Marionette	INFO	Stopped listening on port 64463

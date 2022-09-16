@@ -3,14 +3,22 @@ Documentation    Suite description
 Library     SeleniumLibrary
 
 *** Test Cases ***
-Launch OrangeHRM Login Page
+Launch OrangeHRM and Login with Valid Credentials
     [Tags]    Smoke
-    Open Browser    https://opensource-demo.orangehrmlive.com/index.php     chrome
+    Open Browser	https://opensource-demo.orangehrmlive.com/web/index.php/auth/login	chrome
     Maximize Browser Window
-    Input Text	name=txtUsername	Admin
-    Input Text	name=txtPassword	admin123
-    Click Button    xpath=//input[@id='btnLogin']
-    Sleep   2s
+    Sleep	2s
+    Input Text	    name=username	    Admin
+    Sleep	2s
+    Input Text	    name=password	    admin123
+    Sleep	2s
+    #Click Button	xpath=//input[@id='btnLogin']
+    Click Button	css=button[type='submit']
+    Sleep	2s
+
+Verify that user has landed to Dashboard page
     #Verify that user is on Dashboard page
-    Element Text Should Be	link=Dashboard	Dashboard
-    Close Browser
+    element text should be  xpath=//span[normalize-space()='Dashboard']     Dashboard
+    Sleep	2s
+Close the browser at end
+    close all browsers

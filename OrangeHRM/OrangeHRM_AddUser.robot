@@ -24,12 +24,12 @@ Add Users Details and Click on Save button
 
     Select From List By Label    id=systemUser_userType    Admin
     Input Text  id=systemUser_employeeName_empName  Fiona Grace
-    Input Text  id=systemUser_userName  abhinay
+    Input Text  id=systemUser_userName  dixit2
     Select From List By Value   id=systemUser_status    1
     Input Text  id=systemUser_password  admin123
     Input Text  id=systemUser_confirmPassword  admin123
     Click Button    id=btnSave
     Sleep   2s
-    Page Should Contain Link        link=abhinay
+    Page Should Contain Link        link=dixit2
 Close Browser
     Close browser

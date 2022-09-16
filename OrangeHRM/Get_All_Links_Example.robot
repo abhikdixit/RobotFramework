@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation    Suite description
 Library     SeleniumLibrary
-Library  Collections
+Library     Collections
 
 *** Variables ***
 @{ExpectedLinkList}  View all orders  View all products  Order  Logout  Check All  Uncheck All
@@ -9,12 +9,13 @@ Library  Collections
 *** Test Cases ***
 Launch OrangeHRM Login Page
 
-    Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    Chrome
+    Open Browser    http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx    ff
     Maximize Browser Window
     Input Text    id=ctl00_MainContent_username    Tester
     Input Text    id=ctl00_MainContent_password    test
     Click Button  id=ctl00_MainContent_login_button
     Page Should Contain Button    id=ctl00_MainContent_btnDelete
+
     ${AllLinksCount}=         Get Element count       xpath=//a
     Log to Console   ${AllLinksCount}
     @{ActualLinkList}=    Create List
@@ -26,7 +27,8 @@ Launch OrangeHRM Login Page
     END
     Log To Console  \n List from WebPage:
         Log To Console  ${ActualLinkList}
-        Log To Console  Our List:
+        Log To Console  Expected List:
         Log To Console  ${ExpectedLinkList}
         Lists Should Be Equal  ${ActualLinkList}  ${ExpectedLinkList}
-    Close Browser
+Close Browser
+    close all browsers

@@ -7,9 +7,9 @@ Library     Collections
 Library     OperatingSystem
 *** Variables ***
 ${base_url}     https://demo.spreecommerce.org
-${token}    BTUd-1usa10uriQN61IvuRmexW1LAAGW1tRemp518-c
+${token}        2awfwUF8fF-AbqSlC1InWAQ61Ahl9amozeWFsyhXJ9c
 *** Test Cases ***
-Create an Address
+Create an Address with all Valid info
     create session      mysession   ${base_url}
     log to console      ${token}
     ${headers}      create dictionary    Authorization=Bearer ${token}       Content-Type=application/json
@@ -32,7 +32,7 @@ Create an Address
     #extract the contents of the string out of the query results , to remove unicode
     # Need to use [0]
     Log to console      ${fname[0]}
-    Should be equal  ${fname[0]}  Robot
+    Should be equal  ${fname[0]}    Robot
 
     ${id}=      get value from json  ${response.json()}        $.data.id
 

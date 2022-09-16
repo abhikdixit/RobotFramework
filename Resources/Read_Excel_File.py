@@ -1,12 +1,13 @@
 from RPA.Excel.Files import Files
 from RPA.Tables import Tables
+from robot.api.deco import keyword
 
 
-# excel="testdata/OrangeData.xlsx"
-def get_orders(excel):
+@keyword("Get Orders")
+def get_orders(excel, sheet):
     files = Files()
     workbook = files.open_workbook(excel)
-    rows = workbook.read_worksheet(header=True)
+    rows = workbook.read_worksheet(sheet, header=True)
 
     tables = Tables()
     table = tables.create_table(rows)
@@ -21,7 +22,3 @@ def get_orders(excel):
         orders.append(order)
 
     return orders
-
-
-x = get_orders("D:\\F Drive\\RobotFramework_NewVersion\\testdata\\OrangeData.xlsx")
-print(x)

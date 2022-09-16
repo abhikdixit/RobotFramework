@@ -3,7 +3,7 @@ Documentation    Suite description
 Library  SeleniumLibrary
 *** Test Cases ***
 OrangeHRM_Demo Page
-    Open Browser    https://opensource-demo.orangehrmlive.com/    chrome
+    Open Browser    https://opensource-demo.orangehrmlive.com/    ff
     Maximize Browser Window
     Input Text    name=txtUsername    Admin
     Input Text    name=txtPassword    admin123

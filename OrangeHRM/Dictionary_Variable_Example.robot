@@ -7,7 +7,7 @@ Library     SeleniumLibrary
 &{search_text}  mob=mobile      tv=television      pad=ipad
 *** Test Cases ***
 Search for Product
-    Open Browser	https://www.amazon.in/	chrome
+    Open Browser	https://www.amazon.in/	ff
     Input Text	id=twotabsearchtextbox	${search_text.pad}
     Click Button	xpath=//input[@value='Go']
     Sleep	5s

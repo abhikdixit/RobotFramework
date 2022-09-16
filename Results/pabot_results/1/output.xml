@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.3 (Python 3.8.2 on win32)" generated="20220914 09:48:24.266" rpa="false" schemaversion="2">
+<suite id="s1" name="Suites">
+<suite id="s1-s1" name="CreateOrder UpdateOrder DeleteOrder" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot">
+<test id="s1-s1-t1" name="Login_to_WebOrder">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx</arg>
+<arg>ff</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220914 09:48:24.911" level="INFO">Opening browser 'ff' to base url 'http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx'.</msg>
+<msg timestamp="20220914 09:48:24.914" level="INFO">Firefox driver log is always forced to to: C:\Users\adixit\PycharmProjects\RobotFramework\Results\pabot_results\1\geckodriver-1.log</msg>
+<status status="PASS" starttime="20220914 09:48:24.910" endtime="20220914 09:48:42.308"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220914 09:48:42.309" endtime="20220914 09:48:42.627"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_username</arg>
+<arg>Tester</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:42.630" level="INFO">Typing text 'Tester' into text field 'id=ctl00_MainContent_username'.</msg>
+<status status="PASS" starttime="20220914 09:48:42.628" endtime="20220914 09:48:42.869"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_password</arg>
+<arg>test</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:42.871" level="INFO">Typing text 'test' into text field 'id=ctl00_MainContent_password'.</msg>
+<status status="PASS" starttime="20220914 09:48:42.870" endtime="20220914 09:48:42.911"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>ctl00$MainContent$login_button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:42.913" level="INFO">Clicking button 'ctl00$MainContent$login_button'.</msg>
+<status status="PASS" starttime="20220914 09:48:42.911" endtime="20220914 09:48:45.277"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>tag=h2</arg>
+<arg>List of All Orders</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220914 09:48:45.280" level="INFO">Verifying element 'tag=h2' contains exact text 'List of All Orders'.</msg>
+<status status="PASS" starttime="20220914 09:48:45.278" endtime="20220914 09:48:45.486"/>
+</kw>
+<doc>Test to verify that the user can login to the Web Order page</doc>
+<tag>CreateOrderLogin</tag>
+<status status="PASS" starttime="20220914 09:48:24.909" endtime="20220914 09:48:45.487"/>
+</test>
+<test id="s1-s1-t2" name="Create_new_order">
+<kw name="Depends On Test" library="DependencyLibrary">
+<arg>login_to_WebOrder</arg>
+<status status="PASS" starttime="20220914 09:48:45.495" endtime="20220914 09:48:45.496"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Order</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:45.498" level="INFO">Clicking link 'Order'.</msg>
+<status status="PASS" starttime="20220914 09:48:45.497" endtime="20220914 09:48:46.865"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_InsertButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220914 09:48:46.866" endtime="20220914 09:48:47.004"/>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_ddlProduct</arg>
+<arg>FamilyAlbum</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20220914 09:48:47.009" level="INFO">Selecting options from selection list 'id=ctl00_MainContent_fmwOrder_ddlProduct' by value FamilyAlbum.</msg>
+<status status="PASS" starttime="20220914 09:48:47.006" endtime="20220914 09:48:47.533"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtQuantity</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:47.536" level="INFO">Typing text '10' into text field 'id=ctl00_MainContent_fmwOrder_txtQuantity'.</msg>
+<status status="PASS" starttime="20220914 09:48:47.534" endtime="20220914 09:48:47.659"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtUnitPrice</arg>
+<arg>1000</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:47.662" level="INFO">Typing text '1000' into text field 'id=ctl00_MainContent_fmwOrder_txtUnitPrice'.</msg>
+<status status="PASS" starttime="20220914 09:48:47.660" endtime="20220914 09:48:47.989"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtDiscount</arg>
+<arg>15</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:47.992" level="INFO">Typing text '15' into text field 'id=ctl00_MainContent_fmwOrder_txtDiscount'.</msg>
+<status status="PASS" starttime="20220914 09:48:47.990" endtime="20220914 09:48:48.131"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Calculate</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20220914 09:48:48.133" level="INFO">Clicking button 'Calculate'.</msg>
+<status status="PASS" starttime="20220914 09:48:48.132" endtime="20220914 09:51:03.793"/>
+</kw>
+<kw name="Generate Random String" library="String">
+<var>${random_num}</var>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<msg timestamp="20220914 09:51:03.795" level="INFO">${random_num} = GHg54fWb</msg>
+<status status="PASS" starttime="20220914 09:51:03.794" endtime="20220914 09:51:03.795"/>
+</kw>
+<kw name="Catenate" library="BuiltIn">
+<var>${empname}</var>
+<arg>Shreyas${random_num}</arg>
+<doc>Catenates the given items together and returns the resulted string.</doc>
+<msg timestamp="20220914 09:51:03.797" level="INFO">${empname} = ShreyasGHg54fWb</msg>
+<status status="PASS" starttime="20220914 09:51:03.795" endtime="20220914 09:51:03.798"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${empname}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20220914 09:51:03.800" level="INFO">${empname} = ShreyasGHg54fWb</msg>
+<status status="PASS" starttime="20220914 09:51:03.798" endtime="20220914 09:51:03.801"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_txtName</arg>
+<arg>${empname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220914 09:51:03.804" level="INFO">Typing text 'ShreyasGHg54fWb' into text field 'id=ctl00_MainContent_fmwOrder_txtName'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220914 09:51:03.977" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+</msg>
+<status status="FAIL" starttime="20220914 09:51:03.918" endtime="20220914 09:51:03.977"/>
+</kw>
+<msg timestamp="20220914 09:51:03.978" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Browsing context has been discarded
+</msg>
+<msg timestamp="20220914 09:51:03.979" level="INFO">Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:17
+    T:  Create_new_order    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:34
+      Input Text    id=ctl00_MainContent_fmwOrder_txtName    ${empname}
+      |  ${empname} = ShreyasGHg54fWb (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Capture Page Screenshot    
+______________________________________________________________________________</msg>
+<msg timestamp="20220914 09:51:03.988" level="FAIL">NoSuchWindowException: Message: Browsing context has been discarded
+</msg>
+<status status="FAIL" starttime="20220914 09:51:03.802" endtime="20220914 09:51:03.989"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox2</arg>
+<arg>First Street</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:03.993" endtime="20220914 09:51:03.996"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox3</arg>
+<arg>Best City</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:03.996" endtime="20220914 09:51:03.997"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox4</arg>
+<arg>Best State</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:03.998" endtime="20220914 09:51:03.998"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox5</arg>
+<arg>560001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:03.999" endtime="20220914 09:51:04.000"/>
+</kw>
+<kw name="Select Radio Button" library="SeleniumLibrary">
+<arg>ctl00$MainContent$fmwOrder$cardList</arg>
+<arg>American Express</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.002" endtime="20220914 09:51:04.003"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox6</arg>
+<arg>123456789012</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.003" endtime="20220914 09:51:04.004"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox1</arg>
+<arg>10/22</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.005" endtime="20220914 09:51:04.005"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Process</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.006" endtime="20220914 09:51:04.007"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>tag=strong</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.008" endtime="20220914 09:51:04.009"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>tag=strong</arg>
+<arg>New order has been successfully added.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.010" endtime="20220914 09:51:04.011"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>View all orders</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.012" endtime="20220914 09:51:04.012"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//td[text()='${empname}']</arg>
+<arg>${empname}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.013" endtime="20220914 09:51:04.014"/>
+</kw>
+<doc>Test to verify that the user can create a new order, verify order created, edit order and delete order</doc>
+<tag>EditAndDeleteOrder</tag>
+<status status="FAIL" starttime="20220914 09:48:45.490" endtime="20220914 09:51:04.015">NoSuchWindowException: Message: Browsing context has been discarded
+</status>
+</test>
+<test id="s1-s1-t3" name="Update_the_order_Verify_the_order">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//td[text()='${empname}']//following-sibling::td//input</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220914 09:51:04.023" level="INFO">Clicking element 'xpath=//td[text()='ShreyasGHg54fWb']//following-sibling::td//input'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220914 09:51:04.597" level="FAIL">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.588" endtime="20220914 09:51:04.597"/>
+</kw>
+<msg timestamp="20220914 09:51:04.599" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20220914 09:51:04.601" level="INFO">Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:47
+    T:  Update_the_order_Verify_the_order    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:48
+      Click Element    xpath=//td[text()='${empname}']//following-sibling::td//input
+      |  xpath=//td[text()='${empname}']//following-sibling::td//input = xpath=//td[text()='ShreyasGHg54fWb']//following-sibling::td//input (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Capture Page Screenshot    
+______________________________________________________________________________</msg>
+<msg timestamp="20220914 09:51:04.606" level="FAIL">WebDriverException: Message: Failed to decode response from marionette
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.019" endtime="20220914 09:51:04.606"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=ctl00_MainContent_fmwOrder_TextBox4</arg>
+<arg>Karnataka</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.607" endtime="20220914 09:51:04.609"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Update</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.609" endtime="20220914 09:51:04.611"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>xpath=//td[text()='${empname}']//following-sibling::td[text()='Karnataka']</arg>
+<arg>Karnataka</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.612" endtime="20220914 09:51:04.612"/>
+</kw>
+<status status="FAIL" starttime="20220914 09:51:04.017" endtime="20220914 09:51:04.614">WebDriverException: Message: Failed to decode response from marionette
+</status>
+</test>
+<test id="s1-s1-t4" name="Deleting the user and verify that user got deleted">
+<kw name="Select Checkbox" library="SeleniumLibrary">
+<arg>xpath=//td[text()='${empname}']//preceding-sibling::td//input</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<msg timestamp="20220914 09:51:04.616" level="INFO">Selecting checkbox 'xpath=//td[text()='ShreyasGHg54fWb']//preceding-sibling::td//input'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220914 09:51:04.626" level="FAIL">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.620" endtime="20220914 09:51:04.626"/>
+</kw>
+<msg timestamp="20220914 09:51:04.627" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20220914 09:51:04.627" level="INFO">Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:52
+    T:  Deleting the user and verify that user got deleted    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:53
+      Select Checkbox    xpath=//td[text()='${empname}']//preceding-sibling::td//input
+      |  xpath=//td[text()='${empname}']//preceding-sibling::td//input = xpath=//td[text()='ShreyasGHg54fWb']//preceding-sibling::td//input (str)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Capture Page Screenshot    
+______________________________________________________________________________</msg>
+<msg timestamp="20220914 09:51:04.630" level="FAIL">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.615" endtime="20220914 09:51:04.630"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>Delete Selected</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.631" endtime="20220914 09:51:04.632"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>xpath=//td[text()='${empname}']</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.634" endtime="20220914 09:51:04.634"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>${empname}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.634" endtime="20220914 09:51:04.636"/>
+</kw>
+<status status="FAIL" starttime="20220914 09:51:04.614" endtime="20220914 09:51:04.637">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</status>
+</test>
+<test id="s1-s1-t5" name="Logout_WebOrder">
+<kw name="Depends On Test" library="DependencyLibrary">
+<arg>login_to_WebOrder</arg>
+<status status="PASS" starttime="20220914 09:51:04.640" endtime="20220914 09:51:04.641"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>Logout</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20220914 09:51:04.643" level="INFO">Clicking link 'Logout'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220914 09:51:04.652" level="FAIL">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.645" endtime="20220914 09:51:04.652"/>
+</kw>
+<msg timestamp="20220914 09:51:04.652" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20220914 09:51:04.653" level="INFO">Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:58
+    T:  Logout_WebOrder    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\CreateOrder_UpdateOrder_DeleteOrder.robot:62
+      Click Link    Logout
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  None:0
+      Capture Page Screenshot    
+______________________________________________________________________________</msg>
+<msg timestamp="20220914 09:51:04.657" level="FAIL">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<status status="FAIL" starttime="20220914 09:51:04.641" endtime="20220914 09:51:04.657"/>
+</kw>
+<kw name="Element Attribute Value Should Be" library="SeleniumLibrary">
+<arg>name=ctl00$MainContent$login_button</arg>
+<arg>value</arg>
+<arg>Login</arg>
+<doc>Verifies element identified by ``locator`` contains expected attribute value.</doc>
+<status status="NOT RUN" starttime="20220914 09:51:04.658" endtime="20220914 09:51:04.659"/>
+</kw>
+<doc>Test whether the user has logged out of Web Order</doc>
+<tag>CreateOrderLogout</tag>
+<status status="FAIL" starttime="20220914 09:51:04.638" endtime="20220914 09:51:04.660">InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</status>
+</test>
+<test id="s1-s1-t6" name="Close_browser">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220914 09:51:04.666" endtime="20220914 09:51:04.678"/>
+</kw>
+<status status="PASS" starttime="20220914 09:51:04.662" endtime="20220914 09:51:04.678"/>
+</test>
+<doc>Test for Editing and Deleting a Web Order - Assignment 3 &amp; 4</doc>
+<status status="FAIL" starttime="20220914 09:48:24.354" endtime="20220914 09:51:04.681"/>
+</suite>
+<status status="FAIL" starttime="20220914 09:48:24.295" endtime="20220914 09:51:04.690"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="4" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CreateOrderLogin</stat>
+<stat pass="0" fail="1" skip="0">CreateOrderLogout</stat>
+<stat pass="0" fail="1" skip="0">EditAndDeleteOrder</stat>
+</tag>
+<suite>
+<stat pass="2" fail="4" skip="0" id="s1" name="Suites">Suites</stat>
+<stat pass="2" fail="4" skip="0" id="s1-s1" name="CreateOrder UpdateOrder DeleteOrder">Suites.CreateOrder UpdateOrder DeleteOrder</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220914 09:51:03.978" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: NoSuchWindowException: Message: Browsing context has been discarded
+</msg>
+<msg timestamp="20220914 09:51:04.599" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20220914 09:51:04.627" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20220914 09:51:04.652" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: InvalidSessionIdException: Message: Tried to run command without establishing a connection
+</msg>
+</errors>
+</robot>

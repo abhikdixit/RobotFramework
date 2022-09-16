@@ -1,52 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.8.2 on win32)" generated="20220712 14:47:39.565" rpa="true" schemaversion="2">
+<robot generator="Robot 5.0.1 (Python 3.8.2 on win32)" generated="20220801 17:50:00.169" rpa="true" schemaversion="3">
 <suite id="s1" name="OrangeHRM" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM">
-<suite id="s1-s1" name="WebOrder Add Order DeleteOrder" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\WebOrder_Add_Order_DeleteOrder.robot">
-<test id="s1-s1-t1" name="TC_001-Launch WebOrder and login to application">
+<suite id="s1-s1" name="OrangeHRM Logo Click" source="C:\Users\adixit\PycharmProjects\RobotFramework\OrangeHRM\OrangeHRM_Logo_Click.robot">
+<test id="s1-s1-t1" name="OrangeHRM_Logo_Click" line="6">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx</arg>
-<arg>Chrome</arg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220712 14:47:40.108" level="INFO">Opening browser 'Chrome' to base url 'http://secure.smartbearsoftware.com/samples/testcomplete11/WebOrders/Default.aspx'.</msg>
-<status status="PASS" starttime="20220712 14:47:40.107" endtime="20220712 14:47:46.297"/>
+<msg timestamp="20220801 17:50:00.817" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/'.</msg>
+<status status="PASS" starttime="20220801 17:50:00.815" endtime="20220801 17:50:08.744"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20220712 14:47:46.298" endtime="20220712 14:47:46.525"/>
+<status status="PASS" starttime="20220801 17:50:08.745" endtime="20220801 17:50:09.166"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=ctl00_MainContent_username</arg>
-<arg>Tester</arg>
+<arg>name=txtUsername</arg>
+<arg>Admin</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220712 14:47:46.528" level="INFO">Typing text 'Tester' into text field 'id=ctl00_MainContent_username'.</msg>
-<status status="PASS" starttime="20220712 14:47:46.526" endtime="20220712 14:47:46.750"/>
+<msg timestamp="20220801 17:50:09.169" level="INFO">Typing text 'Admin' into text field 'name=txtUsername'.</msg>
+<status status="PASS" starttime="20220801 17:50:09.167" endtime="20220801 17:50:09.826"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>id=ctl00_MainContent_password</arg>
-<arg>test</arg>
+<arg>name=txtPassword</arg>
+<arg>admin123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220712 14:47:46.754" level="INFO">Typing text 'test' into text field 'id=ctl00_MainContent_password'.</msg>
-<status status="PASS" starttime="20220712 14:47:46.751" endtime="20220712 14:47:46.930"/>
+<msg timestamp="20220801 17:50:09.829" level="INFO">Typing text 'admin123' into text field 'name=txtPassword'.</msg>
+<status status="PASS" starttime="20220801 17:50:09.827" endtime="20220801 17:50:10.112"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
-<arg>id=ctl00_MainContent_login_button</arg>
+<arg>xpath=//input[@id='btnLogin']</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20220712 14:47:46.932" level="INFO">Clicking button 'id=ctl00_MainContent_login_button'.</msg>
-<status status="PASS" starttime="20220712 14:47:46.931" endtime="20220712 14:47:48.531"/>
+<msg timestamp="20220801 17:50:10.115" level="INFO">Clicking button 'xpath=//input[@id='btnLogin']'.</msg>
+<status status="PASS" starttime="20220801 17:50:10.113" endtime="20220801 17:50:14.875"/>
 </kw>
-<kw name="Page Should Contain Button" library="SeleniumLibrary">
-<arg>id=ctl00_MainContent_btnDelete</arg>
-<doc>Verifies button ``locator`` is found from current page.</doc>
-<msg timestamp="20220712 14:47:48.562" level="INFO">Current page contains input 'id=ctl00_MainContent_btnDelete'.</msg>
-<status status="PASS" starttime="20220712 14:47:48.532" endtime="20220712 14:47:48.562"/>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>link=Dashboard</arg>
+<arg>Dashboard</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20220801 17:50:14.877" level="INFO">Verifying element 'link=Dashboard' contains exact text 'Dashboard'.</msg>
+<status status="PASS" starttime="20220801 17:50:14.875" endtime="20220801 17:50:14.960"/>
+</kw>
+<kw name="Click Image" library="SeleniumLibrary">
+<arg>xpath=//img[@alt='OrangeHRM']</arg>
+<doc>Clicks an image identified by ``locator``.</doc>
+<msg timestamp="20220801 17:50:14.961" level="INFO">Clicking image 'xpath=//img[@alt='OrangeHRM']'.</msg>
+<status status="PASS" starttime="20220801 17:50:14.960" endtime="20220801 17:50:15.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220801 17:50:17.178" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20220801 17:50:15.122" endtime="20220801 17:50:17.180"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220801 17:50:17.181" endtime="20220801 17:50:23.334"/>
 </kw>
 <tag>Test</tag>
-<status status="PASS" starttime="20220712 14:47:40.103" endtime="20220712 14:47:48.563"/>
+<status status="PASS" starttime="20220801 17:50:00.813" endtime="20220801 17:50:23.335"/>
 </test>
 <doc>Suite description</doc>
-<status status="PASS" starttime="20220712 14:47:39.638" endtime="20220712 14:47:48.565"/>
+<status status="PASS" starttime="20220801 17:50:00.233" endtime="20220801 17:50:23.337"/>
 </suite>
-<status status="PASS" starttime="20220712 14:47:39.584" endtime="20220712 14:47:48.569"/>
+<status status="PASS" starttime="20220801 17:50:00.191" endtime="20220801 17:50:23.342"/>
 </suite>
 <statistics>
 <total>
@@ -57,7 +74,7 @@
 </tag>
 <suite>
 <stat pass="1" fail="0" skip="0" id="s1" name="OrangeHRM">OrangeHRM</stat>
-<stat pass="1" fail="0" skip="0" id="s1-s1" name="WebOrder Add Order DeleteOrder">OrangeHRM.WebOrder Add Order DeleteOrder</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="OrangeHRM Logo Click">OrangeHRM.OrangeHRM Logo Click</stat>
 </suite>
 </statistics>
 <errors>

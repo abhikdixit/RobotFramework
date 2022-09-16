@@ -1,7 +1,6 @@
 *** Settings ***
 Library     DatabaseLibrary
 Library     OperatingSystem
-Library     SeleniumLibrary
 Library     Collections
 *** Variables ***
 ${dbname}       orangehrm

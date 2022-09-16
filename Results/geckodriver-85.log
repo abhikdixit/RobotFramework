@@ -1,0 +1,18 @@
+1663052966965	geckodriver	INFO	Listening on 127.0.0.1:50077
+1663052970030	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilexG33DL"
+1663052971215	Marionette	INFO	Marionette enabled
+1663052971233	Marionette	INFO	Listening on port 50090
+1663052971967	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\adixit\\AppData\\Local\\Temp\\rust_mozprofilexG33DL\\search.json.mozlz4", (void 0)))
+JavaScript warning: https://static-exp1.licdn.com/sc/h/e785q99h29qs2x2x9sey0p946, line 2: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript warning: https://static.xx.fbcdn.net/rsrc.php/v3i8L84/yf/l/en_GB/MVjHNQPvHzp.js?_nc_x=Ij3Wp8lg5Kz, line 39: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
+JavaScript error: https://abs.twimg.com/responsive-web/client-web/main.442638b9.js, line 1: Error: ApiError: https://twitter.com/i/api/1.1/jot/ces/p2 HTTP-0 codes:[1004] trace_ids:[null]
+JavaScript error: resource://gre/actors/ContentMetaChild.jsm, line 185: InvalidStateError: JSWindowActorChild.sendAsyncMessage: JSWindowActorChild cannot send at the moment
+[2022-09-13T07:09:57Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-09-13T07:09:57Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-09-13T07:09:59Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+[2022-09-13T07:09:59Z ERROR mp4parse] Found 2 nul bytes in "\0\0"
+JavaScript error: https://www.orangehrm.com/_resources/themes/orangehrm/dist/main.js, line 61: TypeError: r(...).popover is not a function
+JavaScript error: https://www.orangehrm.com/_resources/themes/orangehrm/dist/main.js, line 34: ReferenceError: oldInputs is not defined
+1663053010953	Marionette	INFO	Stopped listening on port 50090
+[Parent 716, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167

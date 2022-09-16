@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation  Handling Dropdown, Checkbox, and Radio Buttons in Robot Framework
-Library  SeleniumLibrary
+Library     SeleniumLibrary
 
 *** Variables ***
 
@@ -8,10 +8,10 @@ Library  SeleniumLibrary
 Validate user can select items from the dropdown
     [documentation]  This test case verifies that the user can select values from the dropdown and verify it
     [tags]  Smoke
-    Open Browser  https://the-internet.herokuapp.com/dropdown  Chrome
-    Wait Until Element Is Visible  id:dropdown  timeout=5
+    Open Browser  https://the-internet.herokuapp.com/dropdown  firefox
+    Wait Until Element Is Visible  id:dropdown
     #Sleep       5s
-    Select From List By Index  id:dropdown  1
+    Select From List By Index  id=dropdown  1
     List Selection Should Be  id:dropdown  Option 1
     Select From List By Value  id:dropdown  2
     List Selection Should Be  id:dropdown  Option 2
@@ -22,21 +22,23 @@ Validate user can select items from the dropdown
 Validate user can check and uncheck checkboxes
     [documentation]  This test case verifies that the user can check and uncheck checkboxes and verify it
     [tags]  Smoke
-    Open Browser  https://the-internet.herokuapp.com/checkboxes  Chrome
+    Open Browser  https://the-internet.herokuapp.com/checkboxes  firefox
     Wait Until Element Is Visible  id:checkboxes  timeout=5
     Page Should Contain Checkbox  tag:input
     Checkbox Should Not Be Selected  css:input:nth-child(1)  #Checking checkbox 1 is not selected
     Checkbox Should Be Selected  css:input:nth-child(3)  #Checking checkbox 2 is selected
+    Sleep       5s
     Select Checkbox  css:input:nth-child(1)  #select checkbox 1
     Unselect Checkbox  css:input:nth-child(3)  #unselect checkbox 2
+    Sleep       5s
     Checkbox Should Be Selected  css:input:nth-child(1)  #Checking checkbox 1 is selected
     Checkbox Should Not Be Selected  css:input:nth-child(3)  #Checking checkbox 2 is not selected
     Close Browser
 
 Test3
     [documentation]  This test case verifies that the user can select radio buttons and verify it
-    [tags]  Smoke
-    Open Browser    http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx     chrome
+    [tags]  Test3
+    Open Browser    http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx     firefox
             Input Text	id=ctl00_MainContent_username	Tester
             Input Text	id=ctl00_MainContent_password	test
             Click Button    id=ctl00_MainContent_login_button

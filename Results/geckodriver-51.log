@@ -1,0 +1,26 @@
+1662716151771	geckodriver	INFO	Listening on 127.0.0.1:63622
+1662716154856	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\WINDOWS\\TEMP\\rust_mozprofileTcI7Cq"
+1662716155494	Marionette	INFO	Marionette enabled
+1662716155501	Marionette	INFO	Listening on port 57835
+[GFX1-]: RcANGLE(no compositor window)
+[GFX1-]: Failed to connect WebRenderBridgeChild. isParent=true
+[GFX1-]: Fallback WR to SW-WR + D3D11
+[GFX1-]: [D3D11] create swap chain failed: 0x887a0022, 0
+[GFX1-]: Failed to initialize CompositorD3D11 for SWGL: FEATURE_FAILURE_D3D11_SWAP_CHAIN
+1662716156222	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\WINDOWS\\TEMP\\rust_mozprofileTcI7Cq\\search.json.mozlz4", (void 0)))
+console.error: services.settings: 
+  main/query-stripping Signature failed  InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.error: services.settings: 
+  main/query-stripping local data was corrupted
+console.warn: services.settings: main/query-stripping Signature verified failed. Retry from scratch
+console.error: services.settings: 
+  main/query-stripping Signature failed again InvalidSignatureError: Invalid content signature (main/query-stripping)
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://opensource-demo.orangehrmlive.com"
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://opensource-demo.orangehrmlive.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+console.warn: LoginRecipes: "getRecipes: falling back to a synchronous message for:" "https://opensource-demo.orangehrmlive.com"
+JavaScript error: resource://gre/modules/LoginManagerParent.jsm, line 136: TypeError: gRecipeManager is null
+JavaScript error: https://www.orangehrm.com/_resources/themes/orangehrm/dist/main.js, line 61: TypeError: r(...).popover is not a function
+JavaScript error: https://www.orangehrm.com/_resources/themes/orangehrm/dist/main.js, line 34: ReferenceError: oldInputs is not defined
+1662716178379	Marionette	INFO	Stopped listening on port 57835

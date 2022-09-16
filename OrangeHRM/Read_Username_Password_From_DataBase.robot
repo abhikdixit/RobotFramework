@@ -3,7 +3,6 @@ Library     DatabaseLibrary
 Library     SeleniumLibrary
 Library     OperatingSystem
 
-
 *** Variables ***
 ${dbname}       weborders
 ${dbuser}       root
@@ -16,7 +15,7 @@ Read data from Database
    table must exist     login
    check if exists in database  SELECT * FROM login
    @{queryResults}  QUERY   SELECT * FROM login
-   Open Browser    http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx     chrome
+   Open Browser    http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx     ff
    Maximize Browser Window
    log to console       ${queryResults}
    FOR    ${result}    IN    @{queryResults}

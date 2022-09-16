@@ -1,5 +1,5 @@
 {
-    "uname": "Admin",
-    "pass": "admin123",
-    "url": "https://opensource-demo.orangehrmlive.com/"
+    "uname": "Tester",
+    "pass": "test",
+    "url": "http://secure.smartbearsoftware.com/samples/TestComplete11/WebOrders/Login.aspx"
 }

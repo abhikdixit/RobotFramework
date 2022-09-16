@@ -1,14 +1,14 @@
-import requests
-import json
-def retrieve_a_country():
-    emp_id = 5890
-    r = requests.get("https://chercher.tech/sample/api/product/read?id=" + str(emp_id))
-    print(r.json())
-    print(r.status_code)
-    assert str(200) in str(r.status_code)
-    json_string = r.json()
-    name_value = json_string[0]["name"]
-    print(name_value)
-    return name_value
-#x=test_get_id_details()
-#print(x)
+from robot.api.deco import keyword
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
+
+
+@keyword("Mobile Browser")
+def mobile_browser():
+    opts = Options()
+    # Changing Mobile view (By sending respective Window Size)
+    opts.add_argument("window-size=375,812")
+    # create a new Chrome session
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=opts)
+    return driver
